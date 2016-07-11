@@ -1,0 +1,310 @@
+/*全局设置去掉默认边距*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+/*设置页面宽高以及最小宽高度*/
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    min-height: 560px;
+    min-width: 810px;
+}
+/*固定头部导航栏*/
+.fix_head{
+    position: absolute;
+    width: 466px;
+    right: 0;
+    top: 0;
+    margin-right: 15px;
+}
+/*导航栏利用列表实现*/
+.head_ul{
+    margin-top: 10px;
+}
+/*设置浮动，li水平显示*/
+.head_ul li{
+    margin-left: 20px ;
+    list-style-type: none;
+    float: left;
+
+}
+/*li下的a标签样式，设置字体大小，行高，以居中显示*/
+.head_ul li a{
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+}
+/*伪类，连接文字颜色*/
+.head_ul li a:link{
+    color: #333;
+}
+/*伪类，连接访问后颜色*/
+.head_ul li a:visited{
+    color: #333;
+}
+.head_ul li a:hover{
+    color: #00c;
+}
+/*伪类，最后一个li元素设置浅蓝色背景*/
+.head_ul li:nth-last-child(1){
+    background-color: #38f;
+}
+/*设置最后一个li元素的文字样式*/
+.more_product{
+    padding: 0 5px;
+    color: white !important;
+    text-decoration: none;
+}
+/*百度图标样式，居中，上边距*/
+.img_icon{
+    margin-top: 5%;
+    text-align: center;
+}
+.img_icon img{
+    width: 270px;
+    height: 129px;
+}
+/*搜索表单内容居中*/
+form{
+    text-align: center;
+}
+/*包裹输入框的div样式*/
+.search_input{
+    display: inline-block;
+    width: 540px;
+    height: 36px;
+    border: solid 1px #b6b6b6;
+    border-right: none;
+    text-align: left;
+}
+/*包裹提交按钮的span样式，*/
+.search_btn{
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    background-color: #3385ff;
+    vertical-align: top;
+}
+/*输入框样式*/
+.search_input input{
+    width: 500px;
+    height: 22px;
+    margin-left: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+    border: none;
+    outline: none;
+}
+/*百度一下按钮样式*/
+.search_btn input{
+    width: 100px;
+    height: 38px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: #3385ff;
+    cursor: pointer;
+}
+/*伪类，当光标移动到百度一下时改变颜色*/
+.search_btn input:hover{
+    background-color: #2d78f4;
+}
+/*表单上边距，距离百度图标样式*/
+form{
+    margin-top: 20px;
+}
+/*输入框右边照相机icon*/
+.photo_icon{
+    position: absolute;
+    background: #fff url(../images/icon.png) no-repeat 0 0;
+    width: 18px;
+    height: 16px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+/*伪类，当光标移动到输入框右边照相机时改变颜色*/
+.photo_icon:hover{
+    background-position: 0 -21px;
+}
+/*固定脚注信息*/
+.fix_footer{
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 70px;
+}
+/*包裹二维码图片div样式*/
+.bd_code{
+    display: inline-block;
+    width: 122px;
+    height: 60px;
+    margin-right: 35px;
+}
+/*该div下所有所愿浮动*/
+.bd_code * {
+    float: left;
+}
+/*设置提示文字div上下边距*/
+.tip_text {
+    margin-left: 7px;
+    margin-top: 7px;
+}
+/*提示文字div下的p标签样式*/
+.tip_text p{
+    line-height: 23px;
+    width: 52px;
+    height: 23px;
+    font-size: 13px;
+}
+/*百度相关信息div样式*/
+.bd_foot_msg{
+    vertical-align: top;
+    display: inline-block;
+    width: 350px;
+    height: 70px;
+}
+/*百度相关信息div下p标签样式*/
+.bd_foot_msg p{
+    color: #999;
+    font-size: 13px;
+    text-align: left;
+    height: 23px;
+}
+/*百度相关信息div下p标签下a标签样式*/
+.bd_foot_msg p a{
+    margin-left: 55px;
+    display: inline-block;
+    font-size: 13px;
+}
+/*设置为类，改变颜色*/
+.bd_foot_msg p a:link{
+    color: #999;
+}
+/*设置伪类*/
+.bd_foot_msg p a:visited{
+    color: #999;
+}
+/*设置id为make的标签宽高以及取消边距*/
+#make{
+    width: 100px;
+    height: 15px;
+    margin: 0;
+}
+/*更多产品的下拉框div*/
+.more_product_div{
+    display: none;
+    z-index: 5;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+}
+/*更多产品下拉框的更多产品条目样式*/
+#more_product_item{
+    cursor: pointer;
+    padding: 13px 0;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-bottom: 1px solid rgb(240,240,240);
+}
+/*更多产品下拉框条目样式*/
+.product_item a{
+    text-align: center;
+    display: block;
+    width: 66px;
+    height: 77px;
+    font-size: 13px;
+    line-height: 14px;
+    margin-left: 7px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(240,240,240);
+}
+/*设置伪类，鼠标移动到该位置时出现下划线*/
+.product_item a:hover{
+    text-decoration: underline;
+}
+/*设置图片样式*/
+.product_item img{
+    width: 40px;
+    height: 36px;
+    margin: 10px 10px 5px 10px;
+}
+/*所有产品信息条目*/
+.all_product{
+    margin-top: 15px;
+    border: none;
+}
+/*所有产品下a标签样式*/
+.all_product a{
+    display: inline;
+    border: none;
+}
+/*设置下拉框宽高度和定位样式*/
+#user_setting {
+    overflow-y: hidden;
+    width: 73px;
+    height: 112px;
+    position: absolute;
+    right: 75px;
+    display: none;
+    top: 30px;
+}
+/*设置下拉框主体内容宽度以及背景色*/
+.user_setting_item {
+    margin-top: 5px;
+    width: 71px;
+    height: auto;
+    text-align: left;
+    display: block;
+    border: 1px solid #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -o-box-shadow: 1px 1px 5px #d1d1d1;
+}
+/*下拉框头部尖角样式*/
+.arrow{
+    position: absolute;
+    z-index: 211;
+    display: inline-block;
+    width:0;
+    top: -5px;
+    right: 30px;
+    height:0;
+    font-size:0;
+    border:solid 5px ;
+    border-color:transparent transparent #fff transparent;
+}
+.user_arrow i{
+    border-color:#fff #fff #d8d8d8 #fff;
+}
+/*下拉框每个条目的样式*/
+.user_item a {
+    text-decoration: none;
+    font-size: 13px;
+    width: 72px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+}
+/*下面均为下拉框超链接样式*/
+.user_item a:link{
+    color: black;
+}
+.user_item a:visited{
+    color: black;
+}
+.user_item a:hover {
+    background-color: #2d78f4;
+}

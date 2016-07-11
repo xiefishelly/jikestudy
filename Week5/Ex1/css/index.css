@@ -1,0 +1,38 @@
+/*重置默认边距*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*设置高度*/
+html{
+    height: 100%;
+}
+/*设置body样式*/
+body{
+    background-color: #777689;
+    width: 100%;
+    height: 100%;
+}
+/*表单样式*/
+form{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+}
+/*表单标题样式*/
+h1{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*错误提示样式*/
+#error_text{
+    margin-top: 20px;
+    display: none;
+}
+#etc{
+    margin-left: 10px;
+}
+.btn_group{
+    text-align: center;
+}

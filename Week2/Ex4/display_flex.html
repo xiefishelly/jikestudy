@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第二周作业4</title>
+    <link href="css/display_flex_style.css" rel="stylesheet">
+</head>
+<body>
+    <!--start tag header-->
+    <header>
+        <!-- start class head_ul , the ul is flex nav-->
+        <ul class="head_ul">
+            <li><a href="#box_contrasts">盒子对比</a></li>
+            <li><a href="#hov_flex">弹性盒子水平分栏</a></li>
+            <li><a href="#ver_flex">弹性盒子垂直分栏</a></li>
+            <li><a href="#order_flex">flex排序</a></li>
+            <li><a href="#column_layout">column分栏</a></li>
+            <li><a href="#old_flex_center">旧版弹盒居中</a></li>
+        </ul>
+        <!-- end class head_ul , the ul is flex nav-->
+    </header>
+    <!-- end tag header-->
+    <!-- start tag article-->
+    <article>
+        <!-- start class box_contrasts div, normal and strange box contrasts -->
+        <div class="box_contrasts" id="box_contrasts">
+            <p>正常盒子与怪异盒子：</p>
+            <div class="box_normal">
+                <div class="box_content">
+                    <p>正常的盒子</p>
+                    <p>padding:10px</p>
+                    <p>border:5px</p>
+                    <p>width:130px</p>
+                    <p>height:130px</p>
+                </div>
+            </div>
+            <div class="box_strange">
+                <div class="box_content">
+                    <p>怪异的盒子</p>
+                    <p>padding:10px</p>
+                    <p>border:5px</p>
+                    <p>width:150px</p>
+                    <p>height:150px</p>
+                </div>
+            </div>
+        </div>
+        <!-- end class box_contrasts div-->
+
+        <!-- start class hov_box_column div-->
+        <div class="hov_box_column" id="hov_flex">
+            <h2>弹性盒子水平分栏：</h2>
+            <!-- start class hov_container div-->
+            <div class="hov_container">
+                <div class="left-sidebar">
+                    <h2>左侧边栏</h2>
+                    <ul>
+                        <li><a href="">html4</a></li>
+                        <li><a href="">html5</a></li>
+                        <li><a href="">css1</a></li>
+                        <li><a href="">css2</a></li>
+                        <li><a href="">css3</a></li>
+                    </ul>
+                </div>
+                <div class="contents">
+                    <h2>内容</h2>
+                    <p>
+                        标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，
+                        为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology
+                        Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，
+                        而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，
+                        来创建一个新版本的 HTML。HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，
+                        于2007年被W3C接纳，并成立了新的 HTML 工作团队。HTML 5 的第一份正式草案已于2008年1月22日公布。
+                        HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
+                        2012年12月17日，万维网联盟（W3C）正式宣布凝结了大量网络工作者心血的HTML5规范已经正式定稿。
+                        根据W3C的发言稿称：“HTML5是开放的Web网络平台的奠基石。”
+                    </p>
+                </div>
+                <div class="right-sidebar">
+                    <h2>右侧边栏</h2>
+                    <ul>
+                        <li><a href="">javascript</a></li>
+                        <li><a href="">angularJs</a></li>
+                        <li><a href="">notejs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end class hov_container div-->
+        </div>
+        <!-- end class hov_box_column div-->
+
+        <!-- start class hov_box_column div-->
+        <div class="hov_box_column" id="ver_flex">
+            <h2>弹性盒子垂直分栏：</h2>
+            <!-- start class ver_container div -->
+            <div class="ver_container">
+                <div class="left-sidebar">
+                    <h2>header</h2>
+                    <ul>
+                        <li><a href="">html4</a></li>
+                        <li><a href="">html5</a></li>
+                        <li><a href="">css1</a></li>
+                        <li><a href="">css2</a></li>
+                        <li><a href="">css3</a></li>
+                    </ul>
+                </div>
+                <div class="contents">
+                    <h2>内容</h2>
+                    <p>
+                        标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，
+                        为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology
+                        Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，
+                        而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，
+                        来创建一个新版本的 HTML。HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，
+                        于2007年被W3C接纳，并成立了新的 HTML 工作团队。HTML 5 的第一份正式草案已于2008年1月22日公布。
+                        HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
+                        2012年12月17日，万维网联盟（W3C）正式宣布凝结了大量网络工作者心血的HTML5规范已经正式定稿。
+                        根据W3C的发言稿称：“HTML5是开放的Web网络平台的奠基石。”
+                    </p>
+                </div>
+                <div class="right-sidebar">
+                    <h2>footer</h2>
+                    <ul>
+                        <li><a href="">javascript</a></li>
+                        <li><a href="">angularJs</a></li>
+                        <li><a href="">notejs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end class ver_container div -->
+        </div>
+        <!-- end class hov_box_column div-->
+
+        <!-- start class hov_box_column div-->
+        <div class="hov_box_column" id="order_flex">
+            <h2>弹性盒子flex排序：</h2>
+            <!-- order_* class is use to order display:flex div-->
+            <!-- start class hov_container div-->
+            <div class="hov_container">
+                <div class="left-sidebar order_left">
+                    <h2>左侧边栏1</h2>
+                    <ul>
+                        <li><a href="">html4</a></li>
+                        <li><a href="">html5</a></li>
+                        <li><a href="">css1</a></li>
+                        <li><a href="">css2</a></li>
+                        <li><a href="">css3</a></li>
+                    </ul>
+                </div>
+                <div class="contents order_content">
+                    <h2>内容2</h2>
+                    <p>
+                        标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，
+                        为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology
+                        Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，
+                        而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，
+                        来创建一个新版本的 HTML。HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，
+                        于2007年被W3C接纳，并成立了新的 HTML 工作团队。HTML 5 的第一份正式草案已于2008年1月22日公布。
+                        HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
+                        2012年12月17日，万维网联盟（W3C）正式宣布凝结了大量网络工作者心血的HTML5规范已经正式定稿。
+                        根据W3C的发言稿称：“HTML5是开放的Web网络平台的奠基石。”
+                    </p>
+                </div>
+                <div class="right-sidebar order_right">
+                    <h2>右侧边栏3</h2>
+                    <ul>
+                        <li><a href="">javascript</a></li>
+                        <li><a href="">angularJs</a></li>
+                        <li><a href="">notejs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end class hov_container div-->
+        </div>
+        <!-- end class hov_box_column div-->
+
+        <!-- start class column_layout div-->
+        <div class="column_layout" id="column_layout">
+            <h2>多栏布局：</h2>
+            <div class="column_left">
+                <h2>左侧边栏</h2>
+                <ul>
+                    <li><a href="">html4</a></li>
+                    <li><a href="">html5</a></li>
+                    <li><a href="">css1</a></li>
+                    <li><a href="">css2</a></li>
+                    <li><a href="">css3</a></li>
+                </ul>
+            </div>
+            <div class="column_content ">
+                <h2>内容</h2>
+                <p>
+                    标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，
+                    为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology
+                    Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，
+                    而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，
+                    来创建一个新版本的 HTML。HTML5草案的前身名为 Web Applications 1.0，于2004年被WHATWG提出，
+                    于2007年被W3C接纳，并成立了新的 HTML 工作团队。HTML 5 的第一份正式草案已于2008年1月22日公布。
+                    HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。
+                    2012年12月17日，万维网联盟（W3C）正式宣布凝结了大量网络工作者心血的HTML5规范已经正式定稿。
+                    根据W3C的发言稿称：“HTML5是开放的Web网络平台的奠基石。”
+                </p>
+            </div>
+            <div class="column_right">
+                <h2>右侧边栏</h2>
+                <ul>
+                    <li><a href="">javascript</a></li>
+                    <li><a href="">angularJs</a></li>
+                    <li><a href="">notejs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end class column_layout div-->
+
+        <!-- start class old_flex_center div-->
+        <div class="old_flex_center" id="old_flex_center">
+            <div class="flex_center_content">
+                <p>旧版弹盒居中</p>
+            </div>
+        </div>
+        <!-- end class old_flex_center div-->
+    </article>
+    <!-- end tag article-->
+</body>
+</html>

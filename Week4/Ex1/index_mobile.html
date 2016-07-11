@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <link href="css/index-mobile.css" rel="stylesheet">
+    <title>第四周作业1手机端</title>
+    <script type="text/javascript">
+            (function (doc, win) {
+                var docEl = doc.documentElement,
+                        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                        recalc = function () {
+                            var clientWidth = docEl.clientWidth;
+                            if (!clientWidth) return;
+                            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                        };
+
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window);
+    </script>
+</head>
+<body>
+    <!--start header tag-->
+    <header>
+        <!-- start class search-form form-->
+        <form class="search-form">
+            <!-- start class search-box div-->
+            <div class="search-box">
+                <img class="search-icon" src="images/search-icon-mobile.png">
+                <label>
+                    <input type="search" class="search-input" placeholder="搜索你想要的商品">
+                </label>
+                <span class="search-btn">搜索</span>
+            </div>
+            <!-- end class search-box div-->
+        </form>
+        <!-- end class search-form form-->
+    </header>
+    <!--end header tag-->
+
+    <!--start nav tag-->
+    <nav>
+        <!--start ul tag-->
+        <ul>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/1.png"><br>
+                <span class="nav-text-item">校园代步</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/2.png"><br>
+                <span class="nav-text-item">手机</span>
+            </li>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/3.png"><br>
+                <span class="nav-text-item">电脑</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/4.png"><br>
+                <span class="nav-text-item">数码配件</span>
+            </li>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/5.png"><br>
+                <span class="nav-text-item">数码</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/6.png"><br>
+                <span class="nav-text-item">电器</span>
+            </li>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/7.png"><br>
+                <span class="nav-text-item">运动健身</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/8.png"><br>
+                <span class="nav-text-item">衣服伞帽</span>
+            </li>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/9.png"><br>
+                <span class="nav-text-item">图书教材</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/10.png"><br>
+                <span class="nav-text-item">租赁</span>
+            </li>
+            <li class="odd-color">
+                <img class="nav-img-item" src="images/11.png"><br>
+                <span class="nav-text-item">生活娱乐</span>
+            </li>
+            <li class="even-color">
+                <img class="nav-img-item" src="images/12.png"><br>
+                <span class="nav-text-item">其他</span>
+            </li>
+        </ul>
+    </nav>
+    <!--end  nav tag-->
+
+    <!--start class main div-->
+    <div class="main">
+        <!-- start class main-top div-->
+        <div class="main-top">
+            <div class="location">
+                <img src="images/ico_loc2.png">
+                <span>仲恺农业工程学院</span>
+            </div>
+            <a href="">切换学校</a>
+        </div>
+        <!-- end class main-top div-->
+
+        <!-- start class main-btn div -->
+        <div class="main-btn">
+            <div class="publish-goods add-margin">
+                <img src="images/btn_publish.png">
+            </div>
+            <div class="publish-goods">
+                <img src="images/btn_profile.png">
+            </div>
+        </div>
+        <!-- end class main-btn div -->
+
+        <!-- start class main-content div-->
+        <div class="main-content">
+            <ul>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-img">
+                        <a href="#">
+                            <img src="images/default-good.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="goods-title">福袋</p>
+                        <p class="goods-owner">
+                            <span class="way">快递</span>
+                            <span class="price">￥210</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end class main-content div-->
+    </div>
+    <!--end class main div-->
+
+    <!--start footer tag-->
+    <footer>
+        <div class="copyright">
+            ©版权信息~~~~~
+        </div>
+    </footer>
+    <!--end footer tag-->
+</body>
+
+</html>

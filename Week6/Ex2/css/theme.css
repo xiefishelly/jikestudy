@@ -1,0 +1,132 @@
+/*五种主题颜色样式*/
+.theme-1{  }
+.theme-1-color{
+    color: #07ac72 !important;
+}
+.theme-1-bkcolor{
+    background-color: #07ac72;
+}
+.theme-1-border-left{
+    border-left: solid 1px #07ac72;
+}
+.theme-1-border-right{
+    border-right: solid 1px #07ac72;
+}
+.theme-1-border-top{
+    border-top: solid 1px #07ac72;
+}
+.theme-1-border-bottom{
+    border-bottom: solid 1px #07ac72;
+}
+.theme-1-border{
+    border:  solid 1px #07ac72;
+}
+.theme-1 a:hover,.theme-1 li:hover{
+    color: #07ac72 ;
+}
+.theme-whileColor{
+    color: #fff !important;
+}
+.theme-whileColor:hover{
+    color: #fff !important;
+}
+.theme-2{}
+.theme-2-color{
+    color: #39ADD1 !important;
+}
+.theme-2-bkcolor{
+    background-color: #39ADD1;
+}
+.theme-2-border-left{
+    border-left: solid 1px #39ADD1;
+}
+.theme-2-border-right{
+    border-right: solid 1px #39ADD1;
+}
+.theme-2-border-top{
+    border-top: solid 1px #39ADD1;
+}
+.theme-2-border-bottom{
+    border-bottom: solid 1px #39ADD1;
+}
+.theme-2-border{
+    border:  solid 1px #39ADD1;
+}
+.theme-2 a:hover,.theme-2 li:hover{
+    color: #39ADD1 ;
+}
+.theme-3{}
+.theme-3-color{
+    color: #FFC0CB !important;
+}
+.theme-3-bkcolor{
+    background-color: #FFC0CB;
+}
+.theme-3-border-left{
+    border-left: solid 1px #FFC0CB;
+}
+.theme-3-border-right{
+    border-right: solid 1px #FFC0CB;
+}
+.theme-3-border-top{
+    border-top: solid 1px #FFC0CB;
+}
+.theme-3-border-bottom{
+    border-bottom: solid 1px #FFC0CB;
+}
+.theme-3-border{
+    border:  solid 1px #FFC0CB;
+}
+.theme-3 a:hover,.theme-3 li:hover{
+    color: #FFC0CB ;
+}
+.theme-4{}
+.theme-4-color{
+    color: #f97b0e !important;
+}
+.theme-4-bkcolor{
+    background-color: #f97b0e;
+}
+.theme-4-border-left{
+    border-left: solid 1px #f97b0e;
+}
+.theme-4-border-right{
+    border-right: solid 1px #f97b0e;
+}
+.theme-4-border-top{
+    border-top: solid 1px #f97b0e;
+}
+.theme-4-border-bottom{
+    border-bottom: solid 1px #f97b0e;
+}
+.theme-4-border{
+    border:  solid 1px #f97b0e;
+}
+.theme-4 a:hover,.theme-4 li:hover{
+    color: #f97b0e ;
+}
+.theme-5{}
+.theme-5-color{
+    color: #2794e3 !important;
+}
+.theme-5-bkcolor{
+    background-color: #2794e3;
+}
+.theme-5-border-left{
+    border-left: solid 1px #2794e3;
+}
+.theme-5-border-right{
+    border-right: solid 1px #2794e3;
+}
+.theme-5-border-top{
+    border-top: solid 1px #2794e3;
+}
+.theme-5-border-bottom{
+    border-bottom: solid 1px #2794e3;
+}
+.theme-5-border{
+    border:  solid 1px #2794e3;
+}
+.theme-5 a:hover,.theme-5 li:hover{
+    color: #2794e3 ;
+}

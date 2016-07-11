@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>教师工作量管理系统主页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <!--start class main div-->
+    <div class=" main control_height_10">
+        <!--start class left div-->
+        <div class=" col-sm-3 col-md-3 col-lg-2 leftMenu" id="leftMenu">
+
+            <!--start class headIcon div-->
+            <div class="headIcon ">
+                <a href="http://www.zhku.edu.cn" target="_blank"><img class="head_img" src="images/ic_launcher.png"/></a>
+                <label class="head_title">教师工作量管理系统</label>
+            </div>
+            <!--end class headIcon div-->
+
+            <!--start class menuList div-->
+            <div class="menuList">
+
+                <!--start class mainMenu ul-->
+                <ul class="mainMenu">
+                    <li id="mainMenu_add">
+                        <div class="menuItem collapsed" data-toggle="collapse" data-target="#classCoeSetting">
+                            <span class="iconLiLeft col-sm-offset-0 col-md-offset-1">
+                                <i class="glyphicon glyphicon-credit-card"></i>
+                            </span>
+                            <span class="text_item">课程系数管理</span>
+                            <span class="pull-right"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                        </div>
+                        <ul id="classCoeSetting" class="childMenu  collapse" style="height: 0;">
+                            <li id="coe_adjustmen">
+                                <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-link"></i>
+                                </span>
+                                <span class="child_text_item">课程系数调整</span>
+                            </li>
+                            <li id="coe_query">
+                                <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-hourglass"></i>
+                                </span>
+                                <span class="child_text_item">课程系数查询</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="class_sal_man">
+                        <div class="menuItem">
+                            <span class="iconLiLeft col-sm-offset-0 col-md-offset-1">
+                                <i class="glyphicon glyphicon-yen"></i>
+                            </span>
+                            <span class="text_item">单位课酬管理</span>
+                        </div>
+
+                    </li>
+                    <li id="word_review_add">
+                        <div class="menuItem">
+                            <span class="iconLiLeft col-sm-offset-0 col-md-offset-1">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </span>
+                            <span class="text_item">工作量审核与录入</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menuItem  collapsed" data-toggle="collapse" data-target="#historyWorkQuery" >
+                            <span class="iconLiLeft col-sm-offset-0 col-md-offset-1">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </span>
+                            <span class="text_item">历史工作量查询</span>
+                            <span class="pull-right"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                        </div>
+
+                        <ul id="historyWorkQuery" class="childMenu collapse" style="height: 0">
+                            <li>
+                               <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </span>
+                                <span class="child_text_item">2014</span>
+                            </li>
+                            <li>
+                                <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </span>
+                                <span class="child_text_item">2013</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="data_count_table">
+                        <div class="menuItem collapsed" data-toggle="collapse" data-target="#dataCountTable">
+                            <span class="iconLiLeft col-sm-offset-0 col-md-offset-1">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                            </span>
+                            <span class="text_item">数据统计与报表</span>
+                            <span class="pull-right"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                        </div>
+                        <ul id="dataCountTable" class="childMenu collapse" style="height: 0">
+                            <li>
+                                <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </span>
+                                <span class="child_text_item">2014</span>
+                            </li>
+                            <li>
+                                <span class="childMenuIcon">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </span>
+                                <span class="child_text_item">2013</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--end class mainMenu ul-->
+            </div>
+            <!--end class menuList div-->
+        </div>
+        <!--end class left div-->
+        <!--start class content div-->
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 content " id="content">
+            <!--start id content_head div-->
+            <div id="content_head" class="navbar navbar-duomi navbar-static-top">
+                <div class="head_item_left" >
+                    <a class="menuIcon" id="controlSlide" >
+                        <i  class="glyphicon glyphicon-list"></i>
+                    </a>
+                </div>
+                <div class="head_item_left">
+                    <a href="#" class="menuIcon">
+                        <i id="item_msg" class="glyphicon glyphicon-envelope"></i>
+                    </a>
+                    <span class="messageStyle" style="background-color: indianred"></span>
+                    <span class="moveToSpan">5</span>
+                </div>
+                <div class="head_item_left">
+                    <a href="#" class="menuIcon">
+                        <i id="item_remind" class="glyphicon glyphicon-bell"></i>
+                    </a>
+                    <span class="messageStyle" style="background-color: indianred"></span>
+                    <span class="moveToSpan">5</span>
+                </div>
+                <div class="head_item_right">
+                    <a class="headViewIcon">
+                        <img src="images/test1.png">
+                    </a>
+                    <div class="headText">欢迎您！<strong>FiShelly.</strong><br><a href="login.html">【退出】</a></div>
+                </div>
+                <div class="head_item_setting">
+                    <a class="menuIcon">
+                        <i id="item_setting" class="glyphicon glyphicon-cog"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end id content_head div-->
+            <div >
+                主窗口
+            </div>
+        </div>
+        <!--start class content div-->
+    </div>
+    <!--end class main div-->
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</html>

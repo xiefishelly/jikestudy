@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*整体车样式*/
+.car{
+    width: 406px;
+    position: absolute;
+    bottom: 20px;
+    left:0;
+    -webkit-animation: anim 3s infinite linear;
+    -moz-animation: anim 3s infinite linear;
+    animation: anim 3s infinite linear;
+}
+/*车顶部样式*/
+.cartop{
+    width: 120px;
+    height: 50px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border: 3px solid #000;
+    position: relative;
+    left:50%;
+    margin-left: -60px;
+    border-bottom: none;
+    z-index: 99;
+    background-color: #032903;
+}
+/*车中间样式*/
+.carmiddle{
+    width: 250px;
+    height: 80px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border: 3px solid #000;
+    position: relative;
+    left:50%;
+    margin-left: -125px;
+    border-bottom: none;
+    z-index: 99;
+    background-color: #0BA20B;
+}
+/*中间窗户样式*/
+.window{
+    border-radius: 50px 0 0 0;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #000;
+    position: absolute;
+    background-color: white;
+}
+/*左窗户定位*/
+.left{
+    top:15px;
+    left:25px
+}
+/*右窗户定位*/
+.right{
+    transform: rotate(90deg);
+    top:15px;
+    right:25px
+}
+/*车底部样式*/
+.carbottom{
+    width: 400px;
+    height: 100px;
+    border: 3px solid #000;
+    position: relative;
+    left:50%;
+    margin-left: -200px;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #095F09;
+}
+/*以下车底部轮子样式*/
+.carbottom>div{
+    width: 70px;
+    height: 70px;
+    border: 3px solid #000;
+    border-radius: 70px;
+    float: left;
+    background-color: #ccc;
+}
+.carbottom div:nth-last-child(1){
+    float: right;
+}
+.circle1{
+    position: absolute;
+    top: 25px;
+    left: 82px;
+}
+.circle2{
+    position: absolute;
+    top: 25px;
+    left: 162px;
+}
+.circle3{
+    position: absolute;
+    top: 25px;
+    left: 242px;
+}
+/*炮筒*/
+.boom{
+    width: 140px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50px 50px 50px 50px;
+    transform: rotate(160deg);
+    position: relative;
+    left: 50px;
+}
+/*炮弹*/
+.bomb{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #000;
+    position: absolute;
+    top: -30px;
+    left: 205px;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: b1anim 1s infinite linear;
+    -moz-animation: b1anim 1s infinite linear;
+    animation: b1anim 1s infinite linear;
+}
+/*移动动画*/
+@-webkit-keyframes anim{
+    0%{
+        -webkit-transform:translate(0)
+    }
+    25%{
+        -webkit-transform:translate(100px)
+    }
+    50%{
+        -webkit-transform:translate(200px)
+    }
+    75%{
+        -webkit-transform:translate(300px)
+    }
+    100%{
+        -webkit-transform:translate(400px)
+    }
+}
+@-moz-keyframes anim{
+    0%{
+        -moz-transform:translate(0)
+    }
+    25%{
+        -moz-transform:translate(100px)
+    }
+    50%{
+        -moz-transform:translate(200px)
+    }
+    75%{
+        -moz-transform:translate(300px)
+    }
+    100%{
+        -moz-transform:translate(400px)
+    }
+}
+@keyframes anim{
+    0%{
+        transform:translate(0)
+    }
+    25%{
+       transform:translate(100px)
+    }
+    50%{
+       transform:translate(200px)
+    }
+    75%{
+        transform:translate(300px)
+    }
+    100%{
+        transform:translate(400px)
+    }
+}
+/*炮弹发射动画*/
+@-webkit-keyframes b1anim{
+    0%{
+        -webkit-transform: scale(1);
+        top: -30px;
+        left: 205px;
+    }
+    25%{
+        top: -45px;
+        left: 255px;
+    }
+    50%{
+        top: -60px;
+        left: 315px;
+    }
+    75%{
+        top: -70px;
+        left: 365px;
+    }
+    100%{
+        top: -90px;
+        left: 415px;
+    }
+}
+@-moz-keyframes b1anim{
+    0%{
+        -moz-transform: scale(1);
+        top: -30px;
+        left: 205px;
+    }
+    25%{
+        top: -45px;
+        left: 255px;
+    }
+    50%{
+        top: -60px;
+        left: 315px;
+    }
+    75%{
+        top: -70px;
+        left: 365px;
+    }
+    100%{
+        top: -90px;
+        left: 415px;
+    }
+}
+@keyframes b1anim{
+    0%{
+        transform: scale(1);
+        top: -30px;
+        left: 205px;
+    }
+    25%{
+        top: -45px;
+        left: 255px;
+    }
+    50%{
+        top: -60px;
+        left: 315px;
+    }
+    75%{
+        top: -70px;
+        left: 365px;
+    }
+    100%{
+        top: -90px;
+        left: 415px;
+    }
+}

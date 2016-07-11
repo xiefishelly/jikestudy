@@ -1,0 +1,469 @@
+/*重置默认内外边距*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*设置html高度*/
+html{
+    height: 100%;
+}
+/*设置body样式*/
+body{
+    height: auto;
+    position: relative;
+    min-width: 992px;
+    background-color: #E3EEEC;
+}
+/*设置header样式*/
+header{
+    width: 100%;
+    min-width: 992px;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #fff;
+    height: 120px;
+    border-bottom: 1px solid #CCCCCC;
+    z-index: 999;
+}
+/*设置header内容样式*/
+.header-content{
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+/*logo样式*/
+.img-link{
+    float: left;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+.logo{
+    width: 120px;
+    height: 120px;
+}
+/*标题样式*/
+.title-link{
+    margin: 25px;
+    float: left;
+    display: inline-block;
+    width: 179px;
+    height: 61px;
+}
+.title-link>img{
+    width: 179px;
+    height: 61px;
+}
+/*搜索框以及按钮等样式*/
+.search-box{
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -17.5%;
+    margin-top: 30px;
+}
+.search-input-box{
+    float: left;
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #44C1A5;
+    border-right: none;
+    border-radius: 25px;
+    line-height: 50px;
+}
+.search-img{
+    float: left;
+    margin-left: -100%;
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+    padding-left: 20px;
+}
+.search-input-label{
+    float: left;
+    width: 100%;
+    overflow-x: hidden;
+}
+.search-input{
+    width: 94%;
+    outline: none;
+    border: none;
+    color: #44C1A5;
+    font-size: 16px;
+    margin-top: 17px;
+    margin-left: 15px;
+    padding-left: 45px;
+    padding-right: 30%;
+}
+.search-btn{
+    float: right;
+    width: 25%;
+    height: 50px;
+    border: 1px solid #44C1A5;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #44C1A5;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-left: -25%;
+    font-size: 16px;
+}
+/*注册以及登录按钮组样式*/
+.head_btn_group{
+    float: right;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    color: #44C1A5;
+    text-align: center;
+    position: absolute;
+    right: 10%;
+    top: 40px;
+}
+.head_btn_group>div{
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    cursor: pointer;
+}
+.head_btn_group>div:hover{
+    border: 1px solid #44C1A5;
+    border-radius: 25px;
+}
+/*过渡动画样式*/
+.ease {
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+/*导航栏样式*/
+nav{
+    z-index: 99;
+    width: 120px;
+    background-color: #fff;
+    min-height: 100%;
+    position: absolute;
+}
+/*导航栏ul，li样式*/
+nav>ul>li{
+    list-style: none;
+    border-bottom: 1px solid #E0EBE7;
+}
+.nav-blank{
+    width: 120px;
+    height: 120px;
+}
+.nav-location{
+    text-align: center;
+    width: 120px;
+    height: 120px;
+}
+.nav-icon{
+    display: inline-block;
+    margin-top: 15px;
+    width: 24px;
+    height: 34px;
+    background-image: url(../images/location.png);
+}
+.nav-location>p{
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFB200;
+}
+.nav-location>p>a{
+    display: inline-block;
+    text-decoration: none;
+    color: #44C1A5;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #44C1A5;
+}
+.nav-item{
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+}
+.nav-item>a{
+    cursor: pointer;
+    width: 120px;
+    height: 60px;
+    display: inline-block;
+}
+.nav-item-img-box{
+    width: 50px;
+    height: 60px;
+    float: left;
+}
+.nav-item-img{
+    margin: 15px 10px 0 10px;
+}
+.nav-item-text{
+    text-align: left;
+    width: 60px;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+}
+/*设置鼠标悬停阴影*/
+li:hover {
+    /* Firefox v3.5+ */
+    -moz-box-shadow:inset 0 0 7px rgba(23,190,160,0.3);
+    /* Safari v3.0+ and by Chrome v0.2+ */
+    -webkit-box-shadow:inset 0 0 7px rgba(23,190,160,0.3);
+    /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+    box-shadow:inset 0 0 7px rgba(23,190,160,0.3);
+}
+/*主体内容样式*/
+.container{
+    padding-top: 120px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main{
+    position: relative;
+    margin: 30px auto;
+    width: 640px;
+    height: 100%;
+}
+/*推荐阅读样式*/
+.main-top{
+    width: 100%;
+    height: 60px;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.main-top-title{
+    margin-left: 20px;
+    height: 22px;
+}
+.main-top-content{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 30px;
+}
+.main-top-content>a{
+    font-size: 14px;
+    float: left;
+    width: 33.3333%;
+    text-decoration: none;
+    color: #858d8e;
+}
+/*最新发布求购专区栏样式*/
+.main-content-title{
+    line-height: 80px;
+    width: 100%;
+    height: 40px;
+    border-top: dashed 1px #44C1A5;
+    margin-top: 40px;
+}
+.new-publish{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    width: 120px;
+    height: 40px;
+    background-color: #44C1A5;
+    text-align: center;
+    line-height: 40px;
+    margin-top: -20px;
+}
+.want-buy{
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    width: 120px;
+    height: 30px;
+    background-color: #44C1A5;
+    text-align: center;
+    line-height: 30px;
+    margin-top: -15px;
+}
+/*商品列表栏样式*/
+.main-content{
+    width: 100%;
+    height: auto;
+}
+.main-content>ul{
+    overflow: hidden;
+}
+.main-content>ul>li{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 265px;
+    margin: 0 5px 20px 5px;
+    background-color: #fff;
+    list-style: none;
+}
+.goods-img{
+    width: 100%;
+    height: 200px;
+}
+.goods-img img{
+    width: 100%;
+    height: 200px;
+}
+.goods-title{
+    width: auto;
+    margin-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color:#666666 ;
+}
+.goods-owner{
+    width: auto;
+    margin-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color:#666666 ;
+}
+.way{
+    margin-right: 10px;
+    float: right;
+}
+/*分页栏样式*/
+.page{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.page>ul{
+    width: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.page>a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    list-style: none;
+    margin-right: 5px;
+    background-color:#FFB200;
+    text-decoration: none;
+}
+.page-select{
+    background-color:#44C1A5 !important;
+}
+.page>a:hover{
+    background-color:#44C1A5;
+}
+.pub-page{
+    font-weight: bold;
+    background-color: transparent!important;
+    width: 85px !important;
+    text-align:left;
+}
+/*下一页和上一页样式*/
+.next-page{
+    background: url("../images/page-arrow.png") no-repeat -10px -60px;
+}
+.last-page{
+    background: url("../images/page-arrow.png") no-repeat -10px -10px;
+}
+.next-page:hover{
+    background-position: -10px -160px;
+}
+.last-page:hover{
+    background-position: -10px -110px;
+}
+.next-page>span{
+    margin-left: 10px;
+}
+.last-page>span{
+    margin-left: 25px;
+}
+/*右侧栏样式*/
+aside{
+    position: fixed;
+    right: 20px;
+    top: 150px;
+    width: 140px;
+    height: auto;
+    text-align: center;
+}
+.release-msg{
+    width: 140px;
+    height: 50px;
+    text-decoration: none;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    background-color:#FFB200;
+}
+.help{
+    width: 146px;
+    height: 166px;
+    margin: 30px 0 0 -3px;
+    background-image: url("../images/helped.png") ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.code{
+    background-image: url("../images/new_web_qrcode.png") ;
+}
+/*底部样式*/
+footer{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+footer>h2{
+    margin-top: 80px;
+    color:#44C1A5;
+    font-weight: 900;
+}
+footer>p{
+    margin-top: 30px;
+}
+footer>p>a{
+    color: #666666;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+footer>p>a:hover{
+    color:#FFB200;
+}
+.copyright{
+    color: #666666;
+    padding: 30px;
+}
+/*媒体查询*/
+@media (max-width: 992px){
+    aside{
+        position: absolute;
+        z-index: 999;
+    }
+}
+@media (min-width: 1200px){
+    .main{
+        width: 840px;
+    }
+}
+@media (max-width: 1024px) {
+    .search-box{
+        float: left;
+        width: 35%;
+        height: auto;
+        position: relative;
+        left: 0;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/interview_ques.css" rel="stylesheet">
+</head>
+<body>
+<!--start tag header-->
+<header>
+    <!-- start class head_ul , the ul is flex nav-->
+    <ul class="head_ul">
+        <li><a href="#JavaScript">JavaScript</a></li>
+        <li><a href="#mix">性能优化</a></li>
+        <li><a href="#black">与后端相关</a></li>
+        <li><a href="#other">其他</a></li>
+    </ul>
+    <!-- end class head_ul , the ul is flex nav-->
+</header>
+<!-- end tag header-->
+
+<!--start tag article-->
+<article>
+    <h1>前端面试题</h1>
+
+    <!--start id mix div -->
+    <div id="JavaScript">
+        <h2>JavaScript相关</h2>
+
+        <p>1. 如何理解JavaScript的作用域和作用域链</p>
+
+        <p>作用域：简单的说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。
+            在JavaScript中，变量的作用域有全局作用域和局部作用域两种。
+        </p>
+
+        <p> 全局作用域(Global Scope)在代码中任何地方都能访问到的对象拥有全局作用域，
+            一般来说一下几种情形拥有全局作用域：</p>
+
+        <p> (1)最外层函数和在最外层函数外面定义的变量拥有全局作用域.</p>
+
+        <p> (2)所有末定义直接赋值的变量自动声明为拥有全局作用域.</p>
+
+        <p> (3)所有window对象的属性拥有全局作用域</p>
+
+        <p> 一般情况下，window对象的内置属性都都拥有全局作用域，例如window.name、window.location、window.top等等
+        </p>
+
+        <p>
+            局部作用域(Local Scope)
+            和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，
+            所有在一些地方也会看到有人把这种作用域成为函数作用域，
+        </p>
+
+        <p>作用域链(Scope Chain)</p>
+
+        <p>
+            在JavaScript中，函数也是对象，实际上，JavaScript里一切都是对象。函数对象和其它对象一样，拥有可以通过代码访问的属性和一系列仅供JavaScript引擎访问的内部属性。其中一个内部属性是[[Scope]]，由ECMA-262标准第三版定义，该内部属性包含了函数被创建的作用域中对象的集合，这个集合被称为函数的作用域链，它决定了哪些数据能被函数访问。当一个函数创建后，它的作用域链会被创建此函数的作用域中可访问的数据对象填充。执行此函数时会创建一个称为“运行期上下文(execution
+            context)”的内部对象，运行期上下文定义了函数执行时的环境。每个运行期上下文都有自己的作用域链，用于标识符解析，当运行期上下文被创建时，而它的作用域链初始化为当前运行函数的[[Scope]]所包含的对象。这些值按照它们出现在函数中的顺序被复制到运行期上下文的作用域链中。它们共同组成了一个新的对象，叫“活动对象(activation
+            object)”，该对象包含了函数的所有局部变量、命名参数、参数集合以及this，然后此对象会被推入作用域链的前端，当运行期上下文被销毁，活动对象也随之销毁。
+        </p>
+
+        <p>
+            改变作用域链
+        </p>
+
+        <p>
+            函数每次执行时对应的运行期上下文都是独一无二的，所以多次调用同一个函数就会导致创建多个运行期上下文，当函数执行完毕，执行上下文会被销毁。每一个运行期上下文都和一个作用域链关联。一般情况下，在运行期上下文运行的过程中，其作用域链只会被
+            with 语句和 catch 语句影响。
+            with语句是对象的快捷应用方式，用来避免书写重复代码.但是当代码运行到with语句时，运行期上下文的作用域链临时被改变了。一个新的可变对象被创建，它包含了参数指定的对象的所有属性。这个对象将被推入作用域链的头部，这意味着函数的所有局部变量现在处于第二个作用域链对象中，因此访问代价更高了
+            另外一个会改变作用域链的是try-catch语句中的catch语句。当try代码块中发生错误时，执行过程会跳转到catch语句，然后把异常对象推入一个可变对象并置于作用域的头部。在catch代码块内部，函数的所有局部变量将会被放在第二个作用域链对象中。
+            请注意，一旦catch语句执行完毕，作用域链机会返回到之前的状态。try-catch语句在代码调试和异常处理中非常有用，因此不建议完全避免。你可以通过优化代码来减少catch语句对性能的影响。一个很好的模式是将错误委托给一个函数处理。
+        </p>
+
+        <p>
+            2. 如何理解JavaScript变量声明提升
+        </p>
+
+        <p>
+            javascript的变量声明具有hoisting机制，JavaScript引擎在执行的时候，所以的变量声明都会提升到函数的开头（如果这个变量在这个函数里面）或者全局作用域的开头（如果这个变量是一个全局变量）。
+            函数声明会覆盖变量声明，如果存在函数声明和变量声明（注意：仅仅是声明，还没有被赋值），而且变量名跟函数名是相同的，那么，它们都会被提示到外部作用域的开头，但是，函数的优先级更高，所以变量的值会被函数覆盖掉。
+        </p>
+
+        <p>
+            3. prototype与__proto__的区别
+        </p>
+
+        <p>
+            两者都是对象类型的属性，并非所有的对象类型都有prototype属性，一般只有function对象才有prototype属性(除非主动赋值)，它指向的是一个对象，将来会被多个该function的实例所继承（或者说该对象处于多个实例的原型链上）；__proto__才是真正的原型链的实际指针，然而许多浏览器并不对外公开这个属性，Firefox暴露出这一属性，仅供开发人员理解，但不推荐开发中使用
+        </p>
+
+        <p>4. 了解原型链最顶端的意义</p>
+
+        <p>
+            意义似乎应该放在前面讲更突出重要性，就当不求甚解吧，个人理解有如下意义：
+            A) 清楚对象的继承结构，知道它有哪些父类(父类：指的是该对象原型链向上方向的对象)；
+            B) 了解并调用父类的方法，不会混淆功能；
+            C) 多个对象共享原型链的某一段时，方便调试；
+            针对A好处，我们可以更好的理解instanceof关键字的作用；
+            针对B好处，我们可以调用不同父类的方法完全不同的判断需求，比如：Function.prototype.toString.call(obj)方法用于输出function对象的定义代码，Object.prototype.toString.call(obj)方法用于输出该对象所属的object类型；
+            针对C好处，这个便于理解复杂JS框架中对象的内存管理模型，比如：DOJO框架，这个以后会提及。
+            刚才我们用__proto__获取原型链，有没有一种通用的方式呢？那么在图中有个方法可以做到：
+            Object.getPrototypeOf(obj)，（未测所有浏览器，Firefox, IE10可以）。
+        </p>
+
+        <p>5. JavaScript编码时经常出现回调层级过深的问题，如何解决</p>
+
+        <p>...</p>
+
+        <p>
+            6. Ajax跨域的几种方法以及每种方法的原理
+        </p>
+
+        <p>
+            a.使用JSONP跨域，原理：因为通过script标签引入的js是不受同源策略的限制的。所以我们可以通过script标签引入一个js或者是一个其他后缀形式（如php，jsp等）的文件，此文件返回一个js函数的调用。
+        </p>
+
+        <p>
+            b.动态创建script标签，这种方法其实是JSONP跨域的简化版，JSONP只是在此基础上加入了回调函数。
+            比如上例中的getUsers.php返回的如果不是一个js函数的调用，而是一个js变量。另外，需要注意判断script标签是否加载完成。
+        </p>
+
+        <p>
+            c.利用flash
+            URLLoader跨域，flash有自己的一套安全策略，服务器可以通过crossdomain.xml文件来声明能被哪些域的SWF文件访问，SWF也可以通过API来确定自身能被哪些域的SWF加载。当跨域访问资源时，例如从域baidu.com请求域google.com上的数据，我们可以借助flash来发送HTTP请求。首先，修改域google.com上的crossdomain.xml(一般存放在根目录，如果没有需要手动创建)
+            ，把baidu.com加入到白名单。其次，通过Flash URLLoader发送HTTP请求，最后，通过Flash API把响应结果传递给JavaScript。Flash
+            URLLoader是一种很普遍的跨域解决方案，不过需要支持iOS的话，这个方案就不可行了。
+        </p>
+
+        <p>
+            d.利用Access Control跨域，此跨域方法目前只在很少的浏览器中得以支持，这些浏览器可以发送一个跨域的HTTP请求（Firefox, Google
+            Chrome等通过XMLHTTPRequest实现，IE8下通过XDomainRequest实现），请求的响应必须包含一个Access-
+            Control-Allow-Origin的HTTP响应头，该响应头声明了请求域的可访问权限。例如baidu.com对google.com下的getUsers.php发送了一个跨域的HTTP请求（通过ajax），那么getUsers.php必须加入如下的响应头：
+            header("Access-Control-Allow-Origin: http://www.baidu.com");
+        </p>
+
+        <p>
+            e.利用window.name跨域。
+            window 对象的name属性是一个很特别的属性，当该window的location变化，然后重新加载，它的name属性可以依然保持不变。那么我们可以在页面
+            A中用iframe加载其他域的页面B，而页面B中用JavaScript把需要传递的数据赋值给window.name，iframe加载完成之后（iframe.onload），页面A修改iframe的地址，将其变成同域的一个地址，然后就可以读出iframe的window.name的值了（因为A中的window.name和iframe中的window.name互相独立的，所以不能直接在A中获取window.name，而要通过iframe获取其window.name）。这个方式非常适合单向的数据请求，而且协议简单、安全。不会像JSONP那样不做限制地执行外部脚本。
+        </p>
+
+        <p>
+            f.服务器代理
+            在数据提供方没有提供对JSONP协议或者 window.name协议的支持，也没有对其它域开放访问权限时，我们可以通过server
+            proxy的方式来抓取数据。例如当baidu.com域下的页面需要请求google.com下的资源文件getUsers.php时，直接发送一个指向
+            google.com/getUsers.php的Ajax请求肯定是会被浏览器阻止。这时，我们在baidu.com下配一个代理，然后把Ajax请求绑定到这个代理路径下，例如baidu.com/proxy/,
+            然后这个代理发送HTTP请求访问google.com下的getUsers.php，跨域的HTTP请求是在服务器端进行的（服务器端没有同源策略限制），客户端并没有产生跨域的Ajax请求。这个跨域方式不需要和目标资源签订协议，带有侵略性。
+            双向跨域（两个iframe之间或者两个页面之间，一般用于获取对方数据，document.domain方式还可以直接操作对方DOM）
+        </p>
+
+        <p>
+            g.document.domain（两个iframe之间）
+
+            通过修改document的domain属性，我们可以在域和子域或者不同的子域之间通信。同域策略认为域和子域隶属于不同的域，比如baidu.com和
+            youxi.baidu.com是不同的域，这时，我们无法在baidu.com下的页面中调用youxi.baidu.com中定义的JavaScript方法。但是当我们把它们document的domain属性都修改为baidu.com，浏览器就会认为它们处于同一个域下，那么我们就可以互相获取对方数据或者操作对方DOM了。
+        </p>
+
+        <p>
+            h.location.hash（两个iframe之间），又称FIM，Fragment Identitier Messaging的简写
+            因为父窗口可以对iframe进行URL读写，iframe也可以读写父窗口的URL，URL有一部分被称为hash，就是#号及其后面的字符，它一般用于浏览器锚点定位，Server端并不关心这部分，应该说HTTP请求过程中不会携带hash，所以这部分的修改不会产生HTTP请求，但是会产生浏览器历史记录。此方法的原理就是改变URL的hash部分来进行双向通信。每个window通过改变其他
+            window的location来发送消息（由于两个页面不在同一个域下IE、Chrome不允许修改parent.location.hash的值，所以要借助于父窗口域名下的一个代理iframe），并通过监听自己的URL的变化来接收消息。这个方式的通信会造成一些不必要的浏览器历史记录，而且有些浏览器不支持onhashchange事件，需要轮询来获知URL的改变，最后，这样做也存在缺点，诸如数据直接暴露在了url中，数据容量和类型都有限等。
+        </p>
+
+        <p>
+            i.使用HTML5的postMessage方法（两个iframe之间或者两个页面之间）
+
+            高级浏览器Internet Explorer 8+, chrome，Firefox , Opera 和 Safari
+            都将支持这个功能。这个功能主要包括接受信息的"message"事件和发送消息的"postMessage"方法。比如baidu.com域的A页面通过iframe嵌入了一个google.com域的B页面，可以通过以下方法实现A和B的通信.
+        </p>
+    </div>
+    <!--end id mix div -->
+
+    <!--start id html div -->
+    <div id="mix">
+        <h2>性能优化</h2>
+
+        <p>
+            1. 前端页面如何优化
+        </p>
+
+        <p>
+            参照雅虎军规
+        </p>
+
+        <p>
+            2. 如何解决重绘和回流问题？
+        </p>
+
+        <p>
+            a.当render
+            tree中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建。这就称为回流(reflow)。每个页面至少需要一次回流，就是在页面第一次加载的时候。在回流的时候，浏览器会使渲染树中受到影响的部分失效，并重新构造这部分渲染树，完成回流后，浏览器会重新绘制受影响的部分到屏幕中，该过程成为重绘。
+        </p>
+
+        <p>
+            b. 当render tree中的一些元素需要更新属性，而这些属性只是影响元素的外观，风格，而不会影响布局的，比如background-color。则就叫称为重绘。
+        </p>
+
+        <p>注意：回流必将引起重绘，而重绘不一定会引起回流。
+        </p>
+
+        <p>
+            回流何时发生：
+            当页面布局和几何属性改变时就需要回流。下述情况会发生浏览器回流：
+
+            1、添加或者删除可见的DOM元素；
+
+            2、元素位置改变；
+
+            3、元素尺寸改变——边距、填充、边框、宽度和高度
+
+            4、内容改变——比如文本改变或者图片大小改变而引起的计算值宽度和高度改变；
+
+            5、页面渲染初始化；
+
+            6、浏览器窗口尺寸改变——resize事件发生时；
+        </p>
+
+        <p>
+            回流比重绘的代价要更高，回流的花销跟render tree有多少节点需要重新构建有关系，假设你直接操作body，比如在body最前面插入1个元素，会导致整个render
+            tree回流，这样代价当然会比较高，但如果是指body后面插入1个元素，则不会影响前面元素的回流。
+        </p>
+
+        <p>
+            如何减少回流、重绘
+        </p>
+
+        <p>
+            减少回流、重绘其实就是需要减少对render tree的操作（合并多次多DOM和样式的修改），并减少对一些style信息的请求，尽量利用好浏览器的优化策略。具体方法有：
+
+        <p> a. 直接改变className，如果动态改变样式，则使用cssText（考虑没有优化的浏览器）
+
+        <p> b. 让要操作的元素进行”离线处理”，处理完后一起更新
+
+            *) 使用DocumentFragment进行缓存操作,引发一次回流和重绘；
+            *) 使用display:none技术，只引发两次回流和重绘；
+            *) 使用cloneNode(true or false) 和 replaceChild 技术，引发一次回流和重绘；
+        </p>
+
+
+        <p> c.不要经常访问会引起浏览器flush队列的属性，如果你确实要访问，利用缓存</p>
+
+        <p> d. 让元素脱离动画流，减少回流的Render Tree的规模</p>
+        <p>
+            3. 当需要更新一个ui节点下的1000个li节点的某个属性时候该怎么做才能保证页面性能
+        </p>
+        <p>
+            ....
+        </p>
+
+    </div>
+    <!--end id html div -->
+
+    <!--start id css div -->
+    <div id="black">
+        <h2>服务器相关</h2>
+        <p>1. 是否有后端编程经验</p>
+        <p>
+            有，使用过Java开发一些web应用，以及会使用node，js。
+        </p>
+        <p>
+            2. 如何与后端协作。
+        </p>
+        <p>
+            前端的渲染依赖于后端数据接口的时候
+            把数据字段列出来逐个讨论，确定各自格式，确定protocol，两侧的代码都要遵守这个规约
+            前端代码若只是显示，一般应该避免过紧检查，参与业务运算的值才需要严格检查
+            不过度定制，如果能返回一整个product对象就不要太在意多/少几个字段，这意味着后台程序不需要过度设计API
+            在前端用Model，通常Model封装了validation和default机制，对容错和错误侦测有一定意义
+            前端发起请求的时候多个心眼，考虑这可能给后端带来多大工作量，可否复用
+        </p>
+    </div>
+    <!--end id css div -->
+
+    <!--start id javascript div -->
+    <div id="other">
+        <h2>其他</h2>
+        <p>
+            1. 如何协同管理多人共同开发。
+        </p>
+        <p>
+            ...
+        </p>
+        <p>
+            2. 如果一个页面有很多内容的时候，如何做到快速开发
+        </p>
+        <p>
+            ....
+        </p>
+
+    </div>
+    <!--end id javascript div -->
+</article>
+<!--end tag article-->
+</body>
+</html>

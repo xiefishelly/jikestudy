@@ -1,0 +1,197 @@
+/*重置默认margin padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*设置背景色*/
+html {
+    background-color: #0D7792;
+}
+/*设置body样式*/
+body{
+    width: 710px;
+    background-color: white;
+    border-radius: 30px;
+    height: auto;
+    margin: 10px auto;
+}
+/*设置table合并边框*/
+table {
+    border-collapse: collapse;
+}
+/*设置td边框样式*/
+td {
+    border:1px solid #CCCCCC;
+}
+/*设置左上图标*/
+.title_icon {
+    float: left;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 5px;
+    width: 180px;
+}
+/*设置右下导航*/
+.nav {
+    float: right;
+    display: inline-block;
+    margin-top: 65px;
+    margin-right: 15px;
+}
+/*ul去掉li的左侧的点*/
+.rlc {
+    list-style: none;
+}
+/*浮动，使得li横向排列*/
+.rlc li {
+    float: left;
+}
+/*li内的a标签样式*/
+.rlc li a {
+    color: #FF0099;
+    font-size: 12px;
+    margin-right: 10px;
+}
+/*伪类去除下划线*/
+.rlc li a:link {
+    text-decoration: none;
+}
+/*table宽度，居中*/
+.regist_msg {
+    width: 639px;
+    height: auto;
+    margin: 0 auto;
+}
+/*table标题*/
+.regist_msg caption {
+    height: 65px;
+    line-height: 65px;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*开头文字提示*/
+.fill_tip {
+    height: 58px;
+    font-size: 12px;
+    text-align: center;
+}
+.fill_tip p{
+    line-height: 19px;
+}
+/*必填，提示文字样式*/
+.alerm_text{
+    font-size: 12px;
+    color: #FF0000;
+}
+/*蓝色文字样式*/
+.return{
+    font-size: 12px;
+    color: #0000cc;
+}
+/*伪类去除a下划线*/
+.return:link{
+    text-decoration: none;
+}
+/*分隔栏样式 tr*/
+.split_row{
+    background-color:#EEEEEE ;
+    height: 23px;
+}
+/*分隔栏样式 td*/
+.split_row_item{
+    line-height: 23px;
+    font-size: 12px;
+    color: #003399;
+    margin-left: 20px;
+    font-weight: bold;
+}
+/*左侧td提示文字样式*/
+.fill_item{
+    font-size: 12px;
+    text-align: right;
+    width: 136px;
+    height: 25px;
+}
+/*设定td为固定高度*/
+.height_row{
+    height: 60px;
+}
+/*输入框样式*/
+.input_public{
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 210px;
+}
+/*提示文字行高*/
+.tip_text{
+    line-height: 19px;
+}
+/*籍贯一栏右侧输入框样式*/
+.other_input{
+    margin-left: 3px;
+    width: 129px;
+}
+/*下拉框做外边距*/
+tr select{
+    margin-left: 2px;
+}
+/*重置输入框样式*/
+.change_input_width{
+    width: 145px;
+}
+/*文本框样式*/
+.textarea_public{
+    margin-left: 2px;
+    width: 441px;
+    height: 94px;
+}
+/*字体加粗，大小为12px*/
+.item_title{
+    font-weight: bold;
+    font-size: 12px;
+}
+.item_content{
+    margin-left: 3px;
+    font-size: 12px;
+}
+/*设置checkbox垂直居中*/
+.item_content input[type="checkbox"]{
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.item_content p{
+    line-height: 20px;
+}
+/*设置字体大小*/
+.alone_area{
+    margin-left: 3px;
+    font-size: 12px;
+}
+/*使得checkbox垂直居中*/
+.teach_way{
+    vertical-align: middle;
+}
+/*提交按钮样式*/
+.sub_btn{
+    width: 86px;
+}
+/*提交按钮所在行样式*/
+.centerSubbtn{
+    text-align: center;
+}
+/*底部版权样式*/
+footer{
+    font-size: 12px;
+    margin-top: 5px;
+    color:#333333 ;
+    width: auto;
+    text-align: center;
+    padding-bottom: 40px;
+}
+/*label标签样式*/
+label{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}

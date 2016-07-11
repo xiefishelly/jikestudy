@@ -1,0 +1,26 @@
+/*全局设置去掉默认边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*table居中，边框合并*/
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+/*td设置内边距，边框，同时文字居中*/
+td {
+    padding: 8px 15px;
+    border: solid 1px #000;
+    text-align: center;
+}
+/*标题样式，文字居中，上下外边距*/
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*表格内相应td加粗*/
+.title{
+    font-weight: bold;
+}

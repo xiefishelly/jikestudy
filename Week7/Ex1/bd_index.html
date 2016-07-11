@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="css/bd_index.css">
+    <style>
+        .ski1{
+            cursor: pointer;
+            width: 195px;
+            height: 119px;
+            float: left;
+            margin-left: 1px;
+            margin-bottom: 1px;
+        }
+        .ski2{
+            cursor: pointer;
+            width: 97px;
+            height: 59px;
+            float: left;
+            margin-left: 1px;
+            margin-bottom: 1px;
+        }
+        .ski3{
+            position: relative;
+            top:-59px;
+        }
+    </style>
+</head>
+<body>
+    <!--start class fix_head header-->
+    <header class=" fix_head">
+            <ul class=" head_ulr">
+                <li>
+                    <a href="#">
+                        <span class="address">广州：</span>
+                        <img src="images/a9.png" width="18" height="18">
+                        <span>25℃</span>
+                        <span class="kqs">优</span>
+                        <span>23&nbsp;|&nbsp;</span>
+
+                    </a>
+                </li>
+                <li><a href="#">宝箱</a></li>
+                <li><a href="#" id="ckbtn">换肤</a></li>
+                <li id="disMsg"><a href="#">消息</a></li>
+            </ul>
+            <ul class="head_ul">
+                <li><a href="#">糯米</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">FiShelly.</a></li>
+                <li id="lisetting"><a href="#"  >设置</a></li>
+                <li class="more_product_btn"><a href="#" class="more_product" id="more_pdt">更多产品</a></li>
+            </ul>
+    </header>
+    <!--end class fix_head header-->
+
+    <!--start class search_part div-->
+    <article >
+        <!-- start class img_icon div-->
+        <div class="img_icon">
+            <img src="images/bd_logo1.png" id="bd_logo" />
+        </div>
+        <!-- end class img_icon div-->
+        <form id="sf">
+            <div class="icon_input_box">
+                <span class="form_icon"><img src="images/logo_top_ca79a146.png" height="33" width="101"></span>
+                <span class="search_input" id="search_key">
+                    <input type="text" name="key_word" id="key_word" />
+                    <span class="photo_icon"></span>
+                </span>
+                <span class="search_btn">
+                    <input class="search_btn_ib " id="search_btn" type="submit" value="百度一下" />
+                </span>
+            </div>
+        </form>
+        <div class="return_top">
+            <span class="uparrow"></span>
+        </div>
+        <!-- start class news_container div-->
+        <div class="news_container">
+            <div class="c_c" >
+                <div class="nc_htm">
+                    <ul class="nc_htul" id="nc_ul">
+                        <li><div class="nc_hti ease">我的关注</div></li>
+                        <li><div class="nc_hti nc_hti_sc ease">推荐</div></li>
+                        <li><div class="nc_hti ease">导航</div></li>
+                        <li><div class="nc_hti ease">视频</div></li>
+                        <li><div class="nc_hti ease">购物</div></li>
+                    </ul>
+                    <span class="setting-icon"></span>
+                </div>
+                <div class="nc_htcc" id="news">
+                    <div class="news_tips">
+                        <div class="left_line"></div>
+                        <div class="tips_content">
+                            <div class="tips_icon"></div>
+                            <span>以下信息根据您的兴趣推荐</span>
+                        </div>
+                        <div class="right_line"></div>
+                    </div>
+                    <div class="nc_htc">
+                        <div class="nc_htc_ia">
+                            <span class="hot_icon"></span>
+                            <h2 class="ntitlea">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                            <span class="ntimea">05-28 03:46</span>
+                        </div>
+                        <div class="nc_htc_ia">
+                            <div class="nc_n_tt">
+                                <span class="hot_icon"></span>
+                                <h2 class="ntitleb">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                                <span class="ntimeb">腾讯新闻 05-28 03:46</span>
+                            </div>
+                            <img class="newsImg" src="images/news.jpg" width="176" height="106">
+                        </div>
+                        <div class="nc_htc_ia">
+                            <h2 class="ntitlea">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                            <span class="ntimea">05-28 03:46</span>
+                        </div>
+                        <div class="nc_htc_ia">
+                            <div class="nc_n_tt">
+                                <h2 class="ntitleb">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                                <span class="ntimeb">腾讯新闻 05-28 03:46</span>
+                            </div>
+                            <img class="newsImg" src="images/news.jpg" width="176" height="106">
+                        </div>
+                        <div class="nc_htc_ia">
+                            <h2 class="ntitlea">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                            <span class="ntimea">05-28 03:46</span>
+                        </div>
+                        <div class="nc_htc_ia">
+                            <div class="nc_n_tt">
+                                <h2 class="ntitleb">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                                <span class="ntimeb">腾讯新闻 05-28 03:46</span>
+                            </div>
+                            <img class="newsImg" src="images/news.jpg" width="176" height="106">
+                        </div>
+                        <div class="nc_htc_ia">
+                            <h2 class="ntitlea">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                            <span class="ntimea">05-28 03:46</span>
+                        </div>
+                        <div class="nc_htc_ia">
+                            <div class="nc_n_tt">
+                                <h2 class="ntitleb">校园暴力恋念上升，最高检：降低刑责年龄需论证</h2>
+                                <span class="ntimeb">腾讯新闻 05-28 03:46</span>
+                            </div>
+                            <img class="newsImg" src="images/news.jpg" width="176" height="106">
+                        </div>
+                    </div>
+                    <div class="nc_htr " id="nc_rm">
+                        <div class="nc_htr_t">
+                            <span class="new_hot">实时热点</span>
+                            <a class="re_link">
+                                <span class="reicon"></span>
+                                <span class="new_change">换一换</span>
+                            </a>
+                        </div>
+                        <ul class="new_link">
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">周冬雨地咚余文乐<span class="hot_icon nnew_icon"></span></a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">水原希子好事将近<span class="hot_icon nnew_icon"></span></a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">男生扮女装毕业照<span class="hot_icon nnew_icon"></span></a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">失联女生或涉黄</a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">18男子吃霸王餐</a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">张学友送女儿上学</a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">女子出租屋被害</a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">清华毕业照曝光</a>
+                            </li>
+                            <li>
+                                <em class="news_icon"></em>
+                                <a href="#">世界最帅长发马</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link_group" id="link_group">
+                    <div>
+                        <h3>猜你喜欢</h3>
+                        <div class="content-main">
+                            <ul>
+                                <li><a href="#"><img src="images/baidu.png" class="icon-link"/>百度·贴吧</a></li>
+                                <li><a href="#"><img src="images/sina.png" class="icon-link"/>新浪·微博</a></li>
+                                <li><a href="#"><img src="images/souhu.png" class="icon-link"/>搜狐·视频</a></li>
+                                <li><a href="#"><img src="images/Tencent.png" class="icon-link"/>腾　讯</a></li>
+                                <li><a href="#"><img src="images/wy.png" class="icon-link"/>网易</a></li>
+                                <li><a href="#"><img src="images/youku.png" class="icon-link"/>优酷网</a></li>
+
+                                <li><a href="#"><img src="images/tm.png" class="icon-link"/>天　猫</a></li>
+                                <li><a href="#"><img src="images/fenghuang.png" class="icon-link"/>凤凰网</a></li>
+                                <li><a href="#"><img src="images/tb.png" class="icon-link"/>淘宝网</a></li>
+                                <li><a href="#"><img src="images/game.png" class="icon-link"/>免费游戏</a></li>
+                                <li><a href="#"><img src="images/4399.png" class="icon-link"/>4399游戏</a></li>
+                                <li><a href="#"><img src="images/lanqiu.png" class="icon-link"/>体育·NBA</a></li>
+
+                                <li><a href="#"><img src="images/jd.png" class="icon-link"/>京东商城</a></li>
+                                <li><a href="#"><img src="images/ju.png" class="icon-link"/>聚划算</a></li>
+                                <li><a href="#"><img src="images/tejia.png" class="icon-link"/>今日特价</a></li>
+                                <li><a href="#"><img src="images/hao123.png" class="icon-link"/>hao123影视</a></li>
+                                <li><a href="#"><img src="images/carhome.png" class="icon-link"/>汽车之家</a></li>
+                                <li><a href="#"><img src="images/piao.png" class="icon-link"/>彩票开奖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>资讯信息</h3>
+                        <div class="content-main theme-1 theme-1-border">
+                            <ul>
+                                <li><a href="#"><img src="images/baidu.png" class="icon-link"/>百度·贴吧</a></li>
+                                <li><a href="#"><img src="images/sina.png" class="icon-link"/>新浪·微博</a></li>
+                                <li><a href="#"><img src="images/souhu.png" class="icon-link"/>搜狐·视频</a></li>
+                                <li><a href="#"><img src="images/Tencent.png" class="icon-link"/>腾　讯</a></li>
+                                <li><a href="#"><img src="images/wy.png" class="icon-link"/>网易</a></li>
+                                <li><a href="#"><img src="images/youku.png" class="icon-link"/>优酷网</a></li>
+
+                                <li><a href="#"><img src="images/tm.png" class="icon-link"/>天　猫</a></li>
+                                <li><a href="#"><img src="images/fenghuang.png" class="icon-link"/>凤凰网</a></li>
+                                <li><a href="#"><img src="images/tb.png" class="icon-link"/>淘宝网</a></li>
+                                <li><a href="#"><img src="images/game.png" class="icon-link"/>免费游戏</a></li>
+                                <li><a href="#"><img src="images/4399.png" class="icon-link"/>4399游戏</a></li>
+                                <li><a href="#"><img src="images/lanqiu.png" class="icon-link"/>体育·NBA</a></li>
+
+                                <li><a href="#"><img src="images/jd.png" class="icon-link"/>京东商城</a></li>
+                                <li><a href="#"><img src="images/ju.png" class="icon-link"/>聚划算</a></li>
+                                <li><a href="#"><img src="images/tejia.png" class="icon-link"/>今日特价</a></li>
+                                <li><a href="#"><img src="images/hao123.png" class="icon-link"/>hao123影视</a></li>
+                                <li><a href="#"><img src="images/carhome.png" class="icon-link"/>汽车之家</a></li>
+                                <li><a href="#"><img src="images/piao.png" class="icon-link"/>彩票开奖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie" id="movie">
+                    <h3>电影列表</h3>
+                </div>
+                <div class="movie" id="shopping">
+                    <h3>购物列表</h3>
+                </div>
+                <div class="movie" id="mytab">
+                    <h3>我的导航</h3>
+                </div>
+            </div>
+    </div>
+        <!-- end class news_container div-->
+    </article>
+    <!--close class search_part div-->
+
+    <!-- start id ck div-->
+    <div class="c_ckbox" id="ck" >
+        <div class="c_ckh">
+            <div class="c_c">
+                <ul id="ckhul">
+                    <li><div class="c_ckhi c_ckhiSc ease">热门</div></li>
+                    <li><div class="c_ckhi ease">游戏</div></li>
+                    <li><div class="c_ckhi ease">卡通</div></li>
+                    <li><div class="c_ckhi ease">女神降临</div></li>
+                    <li><div class="c_ckhi ease">明显</div></li>
+                    <li><div class="c_ckhi ease">风景</div></li>
+                    <li><div class="c_ckhi ease">简约</div></li>
+                    <li><div class="c_ckhi ease">小清新</div></li>
+                    <li class="c_khis">|</li>
+                    <li><div class="c_ckhi ease">自定义 </div></li>
+                    <li><div class="c_ckhi ease">最近使用</div></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="c_ck">
+            <div class="c_c">
+                <div class="c_ckc">
+                    <div class="c_ck_img" id="ckci">
+                        <img src="images/fish2.jpg" class="ski1">
+                        <img src="images/fish1.jpg" class="ski2">
+                        <img src="images/fish4.jpg" class="ski2">
+                        <img src="images/fish3.jpg" class="ski2">
+                        <img src="images/fish5.jpg" class="ski2">
+                        <img src="images/fish6.jpg" class="ski2">
+                        <img src="images/fish7.jpg" class="ski1">
+                        <img src="images/fish8.jpg" class="ski2">
+                        <img src="images/fish9.png" class="ski2">
+                        <img src="images/fish10.jpg" class="ski2 ski3">
+                        <img src="images/fish12.png" class="ski2 ski3">
+                        <img src="images/fish11.jpg" class="ski2 ski3">
+                    </div>
+                    <div class="c_ck_img_b">
+                        <div>
+                            <span class="fl left_arrow"></span>
+                            <span class="fl page_one"></span>
+                            <span class="fl page_one page_two"></span>
+                            <span class="fl left_arrow right_arrow"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_ckc c_ckcr">
+                    <div class="skp">
+                        <img src="" id="skp_img">
+                    </div>
+                    <div class="c_ck_img c_ck_img_d"></div>
+                    <div class="c_ck_img_b">
+                        <div>背景皮肤预览</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end id ck div-->
+
+    <!-- start id top_bar_left_msg div-->
+    <div id="top_bar_left_msg" >
+        <div id="msg_arrow"></div>
+        <div id="msg_bg">
+            <div id="msg_content">
+                <span>您目前没有新消息</span>
+            </div>
+            <div id="msg_btn_group_bg">
+                <div id="msg_btn_group">
+                    <div id="msg_btn_clear">
+                        <span class="btnClass ">
+                            <span class="ccMsg"></span>清空消息
+                        </span>
+                    </div>
+                    <div id="msg_btn_set">
+                        <span class="btnClass ">
+                             <span class="msgSetting"></span>消息设置
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end id top_bar_left_msg div-->
+
+    <!-- start id more_product div-->
+    <div class="more_product_div" id="more_product" >
+        <div class="product_item">
+            <div id="more_product_item">
+                更多产品
+            </div>
+            <a href = "#">
+                <img src="images/music.png"/>音乐
+            </a>
+            <a href = "#">
+                <img src="images/image.png"/>图片
+            </a>
+            <a href = "#">
+                <img src="images/zhidao.png"/>知道
+            </a>
+            <a href = "#">
+                <img src="images/wenku.png"/> 文库
+            </a>
+            <a href = "#">
+                <img src="images/bang.png"/>风云榜
+            </a>
+            <a href = "#">
+                <img src="images/tuiguang.png"/>百度推广
+            </a>
+            <div class="all_product">
+                <a id="allp" href = "#">
+                    全部产品>>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end id more_product div-->
+
+    <!-- start id user_setting div-->
+    <div id="user_setting" >
+        <div class="user_arrow">
+            <em class="arrow"></em>
+            <i class="arrow"></i>
+        </div>
+        <div class="user_setting_item">
+            <div class="user_item">
+                <a href="#">搜索设置</a>
+                <a href="#">高级搜索</a>
+                <a href="#">关闭预测</a>
+                <a href="#">搜索历史</a>
+            </div>
+        </div>
+    </div>
+    <!-- emd id user_setting div-->
+
+    <!--start class fix_footer footer-->
+    <footer class="fix_footer">
+        <div class="bd_foot_msg">
+            <p><a id="make"  href="#">把百度设为首页</a><a href="#">关于百度</a><a href="#">About Baidu</a>
+                ©2016 Baidu 使用百度前必读 意见反馈 京ICP证030173号京公网安备11000002000001号 </p>
+        </div>
+    </footer>
+    <!--end class fix_footer footer-->
+</body>
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

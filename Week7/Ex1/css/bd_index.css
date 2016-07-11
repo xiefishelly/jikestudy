@@ -1,0 +1,929 @@
+/*全局设置去掉默认边距*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+/*设置页面宽高以及最小宽高度*/
+body{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    min-width: 910px;
+}
+/*固定头部导航栏*/
+.fix_head{
+    background-color: #f5f5f5;
+    height: 34px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #EEEEEE;
+}
+/*header左边ul列表样式*/
+.head_ulr{
+    float: left !important;
+    height: auto;
+    margin-top: 5px;
+}
+.head_ulr li{
+    list-style-type: none;
+    float: left;
+}
+.head_ulr li a{
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+    color: #555555;
+}
+.head_ulr li a img{
+    margin: 3px 5px 0 5px;
+    float: left;
+}
+.head_ulr li a span{
+    float: left;
+    font-size: 13px;
+}
+.head_ulr li:nth-child(3),.head_ulr li:nth-child(4){
+    margin-left: 20px;
+}
+/*位置边距*/
+.address{
+    margin-left: 25px;
+}
+/*空气质量字体颜色*/
+.kqs{
+    color: #38f;
+    margin: 0 5px 0 5px;
+
+}
+/*导航栏利用列表实现*/
+.head_ul{
+    float: right;
+    height: auto;
+}
+
+/*设置浮动，li水平显示*/
+.head_ul li{
+    padding-top: 5px;
+    padding-bottom: 6px;
+    margin-left: 20px ;
+    list-style-type: none;
+    float: left;
+}
+/*li下的a标签样式，设置字体大小，行高，以居中显示*/
+.head_ul li a{
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+}
+/*伪类，连接文字颜色*/
+.head_ul li a:link{
+    color: #333;
+}
+/*伪类，连接访问后颜色*/
+.head_ul li a:visited{
+    color: #333;
+}
+.head_ul li a:hover{
+    color: #00c;
+}
+/*伪类，最后一个li元素设置浅蓝色背景*/
+.more_product_btn{
+    background-color: #38f;
+}
+/*伪类设置前6个li字体加粗*/
+.head_ul li:nth-child(1),.head_ul li:nth-child(2),.head_ul li:nth-child(3),.head_ul li:nth-child(4),
+.head_ul li:nth-child(5),.head_ul li:nth-child(6){
+    font-weight: 600;
+}
+
+/*设置最后一个li元素的文字样式*/
+.more_product{
+    height: 24px;
+    padding: 0 15px;
+    color: white !important;
+    text-decoration: none;
+}
+/*百度图标样式，居中，上边距*/
+.img_icon{
+    height: 129px;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form_icon{
+    float: left;
+    position: absolute;
+    left: -35px;
+    display: none;
+}
+/*滚动后的搜索框样式*/
+.scroll_form{
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 0 5px #cccccc;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #FFF;
+    position: fixed !important;
+    top: 0 !important;
+    height: 38px !important;
+    padding: 16px 0 !important;
+}
+.icon_input_box{
+    position: relative;
+    width: 805px;
+    margin: 0 auto;
+}
+.img_icon img{
+    margin: 0 auto;
+    width: 270px;
+    height: 129px;
+}
+#bd_logo{
+    display: none;
+}
+/*搜索表单内容居中*/
+form{
+    text-align: center;
+}
+/*包裹输入框的div样式*/
+.search_input{
+    display: inline-block;
+    width: 540px;
+    height: 36px;
+    border: solid 1px #b6b6b6;
+    border-right: none;
+    text-align: left;
+    background-color: #FFF;
+}
+.search_input:hover{
+    border: solid 1px #868383;
+    border-right: none;
+}
+
+/*包裹提交按钮的span样式，*/
+.search_btn{
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    background-color: #3385ff;
+    vertical-align: top;
+}
+/*输入框样式*/
+.search_input input{
+    width: 500px;
+    height: 22px;
+    margin-left: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+    border: none;
+    outline: none;
+}
+/*百度一下按钮样式*/
+.search_btn_ib{
+    width: 100px;
+    height: 38px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: #3385ff;
+    cursor: pointer;
+}
+.search_btn_iw{
+    color: #555555;
+    background: url(../images/skin_dark.png) -206px 0;
+}
+/*伪类，当光标移动到百度一下时改变颜色*/
+.search_btn input:hover{
+    background-color: #2d78f4;
+}
+
+/*输入框右边照相机icon*/
+.photo_icon{
+    position: absolute;
+    background: #fff url(../images/icon.png) no-repeat 0 0;
+    width: 18px;
+    height: 16px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+/*伪类，当光标移动到输入框右边照相机时改变颜色*/
+.photo_icon:hover{
+    background-position: 0 -21px;
+}
+/*固定脚注信息*/
+.fix_footer{
+    position: absolute;
+    bottom: -55px;
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+/*包裹二维码图片div样式*/
+.bd_code{
+    display: inline-block;
+    width: 122px;
+    height: 60px;
+    margin-right: 35px;
+}
+/*该div下所有所愿浮动*/
+.bd_code * {
+    float: left;
+}
+/*设置提示文字div上下边距*/
+.tip_text {
+    margin-left: 7px;
+    margin-top: 7px;
+}
+/*提示文字div下的p标签样式*/
+.tip_text p{
+    line-height: 23px;
+    width: 52px;
+    height: 23px;
+    font-size: 13px;
+}
+/*百度相关信息div样式*/
+.bd_foot_msg{
+    vertical-align: top;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+}
+/*百度相关信息div下p标签样式*/
+.bd_foot_msg p{
+    color: #999;
+    font-size: 13px;
+    text-align: left;
+    height: 23px;
+}
+/*百度相关信息div下p标签下a标签样式*/
+.bd_foot_msg p a{
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 13px;
+}
+/*设置为类，改变颜色*/
+.bd_foot_msg p a:link{
+    color: #999;
+}
+/*设置伪类*/
+.bd_foot_msg p a:visited{
+    color: #999;
+}
+/*设置id为make的标签宽高以及取消边距*/
+#make{
+    width: 100px;
+    height: 15px;
+    margin: 0;
+}
+/*更多产品的下拉框div*/
+.more_product_div{
+    display: none;
+    z-index: 999;
+    width: 85px;
+    height: 100%;
+    position: absolute;
+    border-left: 1px solid #E7E7E7;
+    right: 0;
+    top: 0;
+    background-color: #f9f9f9;
+}
+/*更多产品下拉框的更多产品条目样式*/
+#more_product_item{
+    cursor: pointer;
+    padding: 12px 0;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-bottom: 1px solid rgb(240,240,240);
+}
+/*更多产品下拉框条目样式*/
+.product_item a{
+    text-align: center;
+    display: block;
+    width: 66px;
+    height: 77px;
+    font-size: 13px;
+    line-height: 14px;
+    margin-left: 7px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(240,240,240);
+}
+/*设置伪类，鼠标移动到该位置时出现下划线*/
+.product_item a:hover{
+    text-decoration: underline;
+}
+/*设置图片样式*/
+.product_item img{
+    width: 40px;
+    height: 36px;
+    margin: 10px 10px 5px 10px;
+}
+/*所有产品信息条目*/
+.all_product{
+    margin-top: 15px;
+    border: none;
+}
+/*所有产品下a标签样式*/
+.all_product a{
+    display: inline;
+    border: none;
+}
+/*设置下拉框宽高度和定位样式*/
+#user_setting {
+    overflow-y: hidden;
+    width: 73px;
+    height: 112px;
+    position: absolute;
+    right: 79px;
+    display: none;
+    top: 29px;
+}
+/*设置下拉框主体内容宽度以及背景色*/
+.user_setting_item {
+    background-color: #FFF;
+    margin-top: 5px;
+    width: 71px;
+    height: auto;
+    text-align: left;
+    display: block;
+    border: 1px solid #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -o-box-shadow: 1px 1px 5px #d1d1d1;
+}
+/*下拉框头部尖角样式*/
+.arrow{
+    position: absolute;
+    z-index: 211;
+    display: inline-block;
+    width:0;
+    top: -5px;
+    right: 30px;
+    height:0;
+    font-size:0;
+    border:solid 5px ;
+    border-color:transparent transparent #fff transparent;
+}
+.user_arrow i{
+    border-color:#fff #fff #d8d8d8 #fff;
+}
+/*下拉框每个条目的样式*/
+.user_item a {
+    text-decoration: none;
+    font-size: 13px;
+    width: 72px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+}
+/*下面均为下拉框超链接样式*/
+.user_item a:link{
+    color: black;
+}
+.user_item a:visited{
+    color: black;
+}
+.user_item a:hover {
+    color: #FFF;
+    background-color: #2d78f4;
+}
+/*信息对话框样式*/
+#top_bar_left_msg {
+    background-color: #FFF;
+    top: 35px;
+    left: 150px;
+    height: 141px;
+    width: 278px;
+    position: absolute;
+    display: none;
+}
+#msg_content span {
+    font-size: 12px;
+    background-color: white;
+    margin-top: 5px;
+    padding: 26px 90px;
+    display: block;
+}
+#msg_bg{
+    border: 1px solid #d1d1d1;
+}
+#msg_btn_group div {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#msg_btn_group {
+    text-align: center;
+    margin-left: 39px;
+    margin-right: 39px;
+    padding-top: 10px;
+    border-top: 1px solid #bcbcbc;
+}
+
+#msg_btn_group_bg {
+    width: 276px;
+    height: 50px;
+    background-color: white;
+}
+#msg_arrow {
+    display: inline-block;
+    position: absolute;
+    width: 12px;
+    height: 9px;
+    top: -5px;
+    left: 134px;
+    background: url('../images/other_icon.png') no-repeat -2px -13px;
+}
+/*按钮样式*/
+.btnClass {
+    width: 82px;
+    height: 28px;
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 28px;
+    background: rgb(56,156,255)
+}
+.ccMsg{
+    display: inline-block;
+    font-size: 0;
+    width: 12px;
+    height: 9px;
+    background: url('../images/other_icon.png') no-repeat 0 0;
+}
+.msgSetting{
+    display: inline-block;
+    font-size: 0;
+    width: 12px;
+    height: 10px;
+    background: url('../images/other_icon.png')  no-repeat -15px 0;
+}
+/*换肤对话框样式*/
+.c_ckbox{
+    display: none;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 290px;
+    background-color: #FFF;
+}
+.c_ck{
+    width: 100%;
+    height: 240px;
+    border-bottom: 1px #EEEEEE solid;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+}
+.c_ckh{
+    width: 100%;
+    height: 50px;
+}
+.c_c{
+    background: #FFF;
+    width: 910px;
+    margin: 0 auto;
+}
+.c_c>ul{
+    overflow: hidden;
+}
+.c_c>ul>li{
+    float: left;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    font-size: 13px;
+    list-style: none;
+}
+.c_ckhi{
+    font-size: 13px;
+    color: #555555;
+    padding-left: 7px;
+    padding-right: 7px;
+    cursor: pointer;
+}
+.c_khis{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.c_ckhiSc{
+    background-color: #389cff;
+    color: #FFF;
+}
+.c_ckhi:hover{
+    background-color: #389cff;
+    color: #FFF;
+}
+/*缓动函数*/
+.ease {
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.c_ck_img{
+    width: 588px;
+    height: 178px;
+    background-color: #EEEEEE;
+}
+.c_ck_img_d{
+    position: absolute;
+    width: 265px;
+    height: 180px;
+    /*550*/
+    background: url("../images/skin_preview.png") no-repeat -275px 0;
+}
+.skp{
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    width: 260px;
+    height: 163px;
+    overflow: hidden;;
+}
+#skp_img{
+    width: 260px;
+    height: 163px;
+}
+.c_ckc{
+    margin-top: 20px;
+    float: left;
+}
+.c_ckcr{
+    position: relative;
+    float: right;
+    width: 265px;
+    height: 180px;
+}
+.c_ck_img_b{
+    position: relative;
+    text-align: center;
+    bottom: -190px;
+}
+.c_ck_img_b>div{
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+    font-size: 13px;
+}
+.fl{
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+}
+/*分页样式*/
+.left_arrow{
+    width: 25px;
+    height: 25px;
+    background: url('../images/skin_icon_82b6ef5b.png') no-repeat -1000px -1000px;
+    background-position: 8px -55px;
+    margin-right: 20px;
+}
+.page_one{
+    width: 15px;
+    height: 25px;
+    background: url('../images/skin_icon_82b6ef5b.png') no-repeat -1000px -1000px;
+    background-position: 4px -12px;
+}
+.page_two{
+    background-position: -11px -12px;
+}
+.right_arrow{
+    background-position: 9px -32px;
+    margin-right: 0;
+    margin-left: 20px;
+}
+/*搜索框下方的信息主体样式*/
+.news_container{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+}
+.nc_htm{
+    position: relative;
+    overflow: hidden;
+    border:  1px solid #cacaca;
+}
+.nc_htul{
+    overflow: hidden;
+    float: left;
+    width: auto;
+}
+.nc_htul li{
+    float: left;
+    width: auto;
+    height: 40px;
+}
+.nc_hti{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px 0 20px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.nc_hti_sc{
+    color: #FFF;
+    font-weight: bold;
+    background-color:#9a9da2 ;
+}
+.nc_hti:hover{
+    background-color: #B3B6BB;
+    color: #FFF;
+}
+.nc_htc{
+    width: 560px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+.nc_htcc{
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-top: 0;
+}
+.nc_htc_ia{
+    position: relative;
+    overflow: hidden;
+    width: 544px;
+    border-bottom: 1px solid #cacaca;
+}
+.hot_icon{
+    margin-top: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url("../images/news.png") no-repeat -20px -100px;
+}
+.nnew_icon{
+    background-position: 0 -100px;
+    float: right;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.ntitlea{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 900;
+}
+.ntimea{
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #828282;
+    font-size: 14px;
+}
+.newsImg{
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.ntitleb{
+    width: 345px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 900;
+}
+.nc_n_tt{
+    float: left;
+}
+.ntimeb{
+    position: absolute;
+    display: inline-block;
+    color: #828282;
+    font-size: 14px;
+    bottom: 10px;
+}
+.nc_htr{
+    float: right;
+    width: 310px;
+    height: auto;
+}
+.nc_htr_t{
+    overflow: hidden;
+    margin-top: -13px;
+}
+.new_hot{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+.re_link{
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+}
+.reicon{
+    float: left;
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background: url(../images/news_7dd96f5d.png) -23px -25px no-repeat;
+    vertical-align: bottom;
+}
+.new_change{
+    float: left;
+    display: inline-block;
+    font-size: 13px;
+    width: 40px;
+    text-align: center;
+    white-space: nowrap;
+}
+.new_link{
+    overflow: hidden;
+}
+.new_link li{
+    margin-top: 5px;
+    float: left;
+    width: 50%;
+    height: 34px;
+    line-height: 34px;
+}
+.new_link li a{
+
+    display: inline-block;
+    font-size: 14px;
+    color: #555555;
+    text-decoration: none;
+}
+.new_link li a:hover{
+    color: #578CE2;
+    text-decoration: underline;
+}
+.news_icon{
+    margin-top: 15px;
+    float: left;
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    background-color: #666;
+    margin-right: 7px;
+    font-size: 0;
+}
+
+.content-main{
+    overflow: hidden;
+}
+.content-main ul{
+    overflow: hidden;
+    margin:0 15px 0 30px;
+}
+.content-main ul li{
+    float: left;
+    width: 14%;
+    height: 60px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    background-color: #f4f4f4;
+}
+.content-main ul li a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 60px;
+    color: #000;
+    font-size: 14px;
+}
+.content-main ul li:hover{
+    box-sizing: border-box;
+    border: 1px solid #EEEEEE;
+}
+.icon-link{
+    float: left;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 22px;
+    margin-right: 8px;
+}
+h3{
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.link_group{
+    display: none;
+    border: 1px solid #cacaca;
+    border-top: 0;
+}
+.movie{
+    border: 1px solid #cacaca;
+    border-top: 0;
+    height: 500px;
+}
+#movie{
+    display: none;
+}
+#shopping{
+    display: none;
+}
+#mytab{
+    display: none;
+}
+.setting-icon{
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    margin-top: 12px;
+    margin-right: 20px;
+    background: url(../images/card_setts_fdb17359.png) no-repeat -121px -49px;
+}
+.setting-icon:hover{
+    background-position: -121px -73px;
+}
+/*回到顶部样式*/
+.return_top{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    margin-left: 463px;
+    bottom: 70px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cecece;
+    line-height: 40px;
+    background-color: #FFF;
+}
+.return_top:hover{
+    background-color: #EEEEEE;
+
+}
+.return_top:hover:before{
+    background-color: #EEEEEE;
+    position: absolute;
+    content: "回到顶部";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 15px;
+    font-size: 12px;
+    color: #555555;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.uparrow{
+    margin-top: 12px;
+    margin-left: 5px;
+    width: 29px;
+    height: 20px;
+    display: inline-block;
+    background: url(../images/card_setts_fdb17359.png) no-repeat -37px 0;
+}
+/*实时热点滚动时样式*/
+.nc_rm{
+    position: fixed;
+    left: 50%;
+    top: 134px;
+    margin-left: 140px;
+}
+.left_line,
+.right_line,
+.tips_content,
+.tips_icon,
+.news_tips span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.left_line,
+.right_line {
+    height: 0;
+    width: 172px;
+    font-size: 0;
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 21px;
+}
+
+.tips_content {
+    width: 187px;
+    padding-top: 21px;
+    margin: 0 auto;
+}
+
+.tips_icon {
+    height: 14px;
+    width: 12px;
+    margin: 0 6px 0 6px;
+    background: url(../images/news.png) no-repeat -45px -1px;
+}
+
+.news_tips span {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .4);
+}
+.news_tips {
+    float: left;
+}

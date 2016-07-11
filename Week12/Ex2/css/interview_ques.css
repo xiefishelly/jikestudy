@@ -1,0 +1,84 @@
+body,.head_ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #EEEEEE;
+}
+header{
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+/*header导航栏样式*/
+.head_ul{
+    box-shadow: 4px 4px 4px #d1d1d1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow:row wrap;
+    flex-flow: row wrap;
+}
+/*设置flex，默认情况下导航显示六行一列，li水平显示*/
+.head_ul li{
+    -webkit-flex: 1 1 100%;
+    flex: 1 20 100%;
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transform: scale(1,1);
+    transition: transform 0.5s linear ;
+}
+/*li下的a标签样式，设置字体大小，行高，以居中显示*/
+.head_ul li a{
+    color: white;
+    font-size: 15px;
+    line-height: 40px;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+}
+/*伪类，连接文字颜色*/
+.head_ul li a:link{
+    text-decoration: none;
+}
+/*鼠标悬停开始方法动画*/
+.head_ul li:hover{
+    z-index: 2;
+    transform: scale(1.5,1.5);
+}
+/*媒体查询，当大于480px时，导航变成三行两列*/
+@media screen and (min-width: 480px) {
+    .head_ul li{
+        -webkit-flex: 1 1 50%;
+        flex: 1 1 50%;
+    }
+}
+/*媒体查询，当大于768px，变成一行六列*/
+@media screen and (min-width: 768px) {
+    .head_ul li{
+        -webkit-flex: 1 ;
+        flex: 1 ;
+    }
+}
+/*设置li背景色*/
+.head_ul li:nth-child(1){
+    background-color: #39ADD1;
+}
+.head_ul li:nth-child(2){
+    background-color: #3079AB;
+}
+.head_ul li:nth-child(3){
+    background-color: #982551;
+}
+.head_ul li:nth-child(4){
+    background-color: #E15258;
+}
+article{
+    margin-left: 10px;
+}
+h1{
+    margin-top: 45px;
+}

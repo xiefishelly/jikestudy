@@ -1,0 +1,157 @@
+/*重试所有元素内外边距*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+html,body{
+    min-width: 275px;
+}
+body{
+    background-color: #EEEEEE;
+}
+/*content设置为relative*/
+#content{
+    position: relative;
+}
+/*box设置浮动以及内边距*/
+.box{
+    padding: 5px;
+    float: left;
+}
+/*设置包图片的盒子*/
+.img_box{
+    padding: 5px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 5px #cccccc;
+    border-radius: 5px;
+}
+/*图片大小*/
+.img_box img{
+    width: 250px;
+    height: auto;
+}
+/*header样式*/
+header{
+    top:0;
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    position: fixed;
+    z-index: 999;
+    min-width: 1000px;
+}
+
+.hc_l{
+    overflow: hidden;
+    padding-top: 20px;
+    margin-left: 195px;
+}
+.hc_l ul li{
+    list-style: none;
+    float: left;
+    text-align: left;
+    margin-right: 15px;
+}
+.hc_l ul li a{
+
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #555555;
+}
+/*百度图标样式，居中，上边距*/
+.img_icon{
+    margin-left: 40px ;
+    float: left;
+}
+.imgStyle1{
+    width: 137px;
+    height: 46px;
+}
+.imgStyle2{
+    width: 101px;
+    height: 33px;
+    margin-top: 10px;
+}
+/*搜索表单内容居中*/
+form{
+    float: left;
+    text-align: center;
+}
+/*包裹输入框的div样式*/
+.search_input{
+    display: inline-block;
+    width: 540px;
+    height: 36px;
+    border: solid 1px #b6b6b6;
+    border-right: none;
+    text-align: left;
+}
+.search_input:hover{
+    border: solid 1px #868383;
+    border-right: none;
+}
+
+/*包裹提交按钮的span样式，*/
+.search_btn{
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    background-color: #3385ff;
+    vertical-align: top;
+}
+/*输入框样式*/
+.search_input input{
+    width: 500px;
+    height: 22px;
+    margin-left: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+    border: none;
+    outline: none;
+}
+/*百度一下按钮样式*/
+.search_btn input{
+    width: 100px;
+    height: 38px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: #3385ff;
+    cursor: pointer;
+}
+/*伪类，当光标移动到百度一下时改变颜色*/
+.search_btn input:hover{
+    background-color: #2d78f4;
+}
+/*表单上边距，距离百度图标样式*/
+form{
+    margin-top: 13px;
+    margin-left: 15px;
+}
+/*输入框右边照相机icon*/
+.photo_icon{
+    position: absolute;
+    background: #fff url(../images/icon.png) no-repeat 0 0;
+    width: 18px;
+    height: 16px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+/*伪类，当光标移动到输入框右边照相机时改变颜色*/
+.photo_icon:hover{
+    background-position: 0 -21px;
+}
+.search_box{
+    overflow: hidden;
+}
+.res span{
+    margin: 10px 0 13px 40px;
+    display: inline-block;
+    font-size: 14px;
+    background: url(../images/search-icon.png) no-repeat 0 6px;
+    padding-left:18px ;
+    padding-top: 4px;
+}

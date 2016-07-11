@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五周作业1</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/index.css" rel="stylesheet" >
+</head>
+<body>
+<!--start class container div-->
+<div class="container">
+    <!-- start class form-horizontal form -->
+    <form class="form-horizontal">
+        <h1>学生等级计算</h1>
+        <!-- start class form-group div-->
+        <div class="form-group">
+            <label class="sr-only" for="score">学生分数</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-fire"></span>
+                </div>
+                <input type="text" class="form-control" id="score" placeholder="输入学生分数">
+                <div class="input-group-addon">学生分数（单位/分）</div>
+            </div>
+        </div>
+        <!-- end class form-group div-->
+
+        <!-- start class form-group div-->
+        <div class="form-group">
+            <label class="sr-only" for="level">学生等级</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-sort-by-order"></span>
+                </div>
+                <input type="text" class="form-control" id="level" placeholder="学生等级" readonly>
+                <div class="input-group-addon">等生</div>
+            </div>
+        </div>
+        <div class="btn_group">
+            <button type="submit" id="compute" class="btn btn-primary">&nbsp;&nbsp;&nbsp;计算&nbsp;&nbsp;&nbsp;</button>
+        </div>
+        <!-- end class form-group div-->
+        <!-- start id error_text div-->
+        <div id="error_text" class="alert alert-danger" role="alert">
+            <span id="error_content" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
+            </span>
+            <span id="etc"></span>
+        </div>
+        <!-- end id error_text div-->
+    </form>
+    <!-- end class form-horizontal form -->
+
+</div>
+<!--end class container div-->
+</body>
+<script src="js/index.js"></script>
+</html>

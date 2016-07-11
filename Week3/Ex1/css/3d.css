@@ -1,0 +1,134 @@
+/*矩形魔方位置，大小样式*/
+.rectangle{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 50%;
+    left: 20%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-perspective: 400px;
+    perspective: 400px;
+}
+/*承载魔方主题样式*/
+.box{
+    height: 150px;
+    width: 150px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: anim 4s infinite ease-in-out;
+    animation: anim 4s infinite ease-in-out;
+}
+/*主体下魔方每个面样式*/
+.box div{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+/*圆形面魔方位置，大小样式*/
+.circle{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 50%;
+    right: 20%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-perspective: 400px;
+    perspective: 400px;
+}
+/*将矩形面变成圆形面*/
+.circle .box div{
+    border-radius: 50%;
+}
+/*soft1-6，对应每个魔方面的颜色，以及3d变换样式*/
+.soft1{
+    -webkit-transform: translateZ(75px);
+    transform: translateZ(75px);
+}
+.soft2{
+    -webkit-transform: rotateY(90deg) translateZ(75px);
+    transform: rotateY(90deg) translateZ(75px);
+}
+.soft3{
+    -webkit-transform: rotateY(-90deg) translateZ(75px);
+    transform: rotateY(-90deg) translateZ(75px);
+}
+.soft4{
+    -webkit-transform: rotateX(-90deg) translateZ(75px);
+    transform: rotateX(-90deg) translateZ(75px);
+}
+.soft5{
+    -webkit-transform:rotateX(90deg)  translateZ(75px);
+    transform:rotateX(90deg)  translateZ(75px);
+}
+.soft6{
+    -webkit-transform:rotateY(-180deg) translateZ(75px);
+    transform:rotateY(-180deg) translateZ(75px);
+}
+.soft1 div,.soft2 div,.soft3 div,.soft4 div,.soft5 div,.soft6 div{
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: 1px solid #000;
+    position: relative;
+    /*opacity: 0.8;*/
+}
+.soft1 div{
+    background-color: #f00;
+}
+.soft2 div{
+    background-color: #00f;
+}
+.soft3 div{
+    background-color: #FFA500;
+}
+.soft4 div{
+    background-color: #FFFF00;
+}
+.soft5 div{
+    background-color: #ccc;
+}
+.soft6 div{
+    background-color: #0f0;
+}
+/*设置动画*/
+@-webkit-keyframes anim{
+    0%{
+        -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        opacity: 1;
+    }
+    33.33%{
+        -webkit-transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);
+        opacity: 0.8;
+    }
+    66.66%{
+        -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+        opacity: 0.6;
+    }
+    100%{
+        -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg)  ;
+        opacity: 0.4;
+    }
+}
+@keyframes anim{
+    0%{
+        transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        opacity: 1;
+    }
+    33.33%{
+        transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);
+        opacity: 0.8;
+    }
+    66.66%{
+        transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+        opacity: 0.6;
+    }
+    100%{
+        transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg)  ;
+        opacity: 0.4;
+    }
+}

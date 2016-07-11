@@ -1,0 +1,39 @@
+<html>
+<title>图片居中</title>
+<style>
+    .main {
+        width:400px;height:300px;border:0px solid #0F0F0F;overflow:hidden;
+    }
+    .parent {
+        height:300px;width:1600px;position:relative;
+    }
+    .sub {
+        width:398px;
+        *width:400px;
+        height:298px;border:1px solid #00FFFF;
+        float: left;
+    }
+</style>
+<body>
+<div class="main">
+    <div id="parent" class="parent">
+        <div id="sub1" class="sub" style="background:#00FF00;"></div>
+        <div id="sub2" class="sub" style="background:#0000FF;"></div>
+        <div id="sub3" class="sub" style="background:#00FFFF;"></div>
+        <div id="sub4" class="sub" style="background:#FF0000;"></div>
+    </div>
+</div>
+<input type="button" onclick="slideleft();" value="slide"/>
+</body>
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+    function slideleft() {
+        $('#parent>div:first').animate({width:'0px'},400,callback);
+    }
+    function callback() {
+        $('#parent>div:last').after($('#parent>div:first'));
+        $('#parent>div:last').css('width', '398px');
+    }
+</script>
+</html>
+

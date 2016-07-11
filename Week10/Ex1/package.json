@@ -1,0 +1,9 @@
+{
+  "name": "mqbdindex",
+  "version": "1.0.0",
+  "description": "响应式百度首页",
+  "keywords": [
+    "media query",
+    "baidu index"
+  ],
+}

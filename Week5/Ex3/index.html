@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第五周作业3</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/index.css" rel="stylesheet" >
+</head>
+<body>
+<!--start class container div-->
+<div class="container">
+    <!-- start class form-horizontal form -->
+    <form class="form-horizontal">
+        <h1>数组统计</h1>
+        <!-- start id error_text div-->
+        <div id="error_text" class="alert alert-danger" role="alert">
+            <span id="error_content" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
+            </span>
+            <span id="etc"></span>
+        </div>
+        <!-- end id error_text div-->
+
+        <!-- start class form-group div-->
+        <div class="form-group">
+            <label class="sr-only" for="input">数组输入</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-font"></span>
+                </div>
+                <input type="text" class="form-control" id="input" placeholder="输入字符，如果不输入则使用默认">
+                <div class="input-group-addon">输入字符，以","隔开</div>
+            </div>
+        </div>
+        <!-- end class form-group div-->
+
+        <!-- start class form-group div-->
+        <div class="form-group">
+            <label class="sr-only" for="mostVal">结果显示</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-text-width"></span>
+                </div>
+                <input type="text" class="form-control" id="mostVal" placeholder="次数最多的字母" readonly>
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+                </div>
+                <input type="text" class="form-control" id="mostCount" placeholder="出现次数" readonly>
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th-large"></span>
+                </div>
+                <input type="text" class="form-control" id="mostIdx" placeholder="出现下标" readonly>
+            </div>
+        </div>
+        <div class="btn_group">
+            <button type="button" id="count" class="btn btn-primary">&nbsp;&nbsp;&nbsp;统计&nbsp;&nbsp;&nbsp;</button>
+        </div>
+        <!-- end class form-group div-->
+    </form>
+    <!-- end class form-horizontal form -->
+</div>
+<!--end class container div-->
+</body>
+<script src="js/index.js"></script>
+</html>

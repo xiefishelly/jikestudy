@@ -1,0 +1,213 @@
+/*重设默认padding和margin*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*header导航栏样式*/
+.head_ul{
+    box-shadow: 4px 4px 4px #d1d1d1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow:row wrap;
+    flex-flow: row wrap;
+}
+/*设置flex，默认情况下导航显示六行一列，li水平显示*/
+.head_ul li{
+    -webkit-flex: 1 1 100%;
+    flex: 1 20 100%;
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transform: scale(1,1);
+    transition: transform 0.5s linear ;
+}
+/*li下的a标签样式，设置字体大小，行高，以居中显示*/
+.head_ul li a{
+    color: white;
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+}
+/*伪类，连接文字颜色*/
+.head_ul li a:link{
+    text-decoration: none;
+}
+/*鼠标悬停开始方法动画*/
+.head_ul li:hover{
+    z-index: 2;
+    transform: scale(1.5,1.5);
+}
+/*媒体查询，当大于480px时，导航变成三行两列*/
+@media screen and (min-width: 480px) {
+    .head_ul li{
+        -webkit-flex: 1 1 50%;
+        flex: 1 1 50%;
+    }
+}
+/*媒体查询，当大于768px，变成一行六列*/
+@media screen and (min-width: 768px) {
+    .head_ul li{
+        -webkit-flex: 1 ;
+        flex: 1 ;
+    }
+}
+/*设置li背景色*/
+.head_ul li:nth-child(1){
+    background-color: #39ADD1;
+}
+.head_ul li:nth-child(2){
+    background-color: #3079AB;
+}
+.head_ul li:nth-child(3){
+    background-color: #982551;
+}
+.head_ul li:nth-child(4){
+    background-color: #E15258;
+}
+.head_ul li:nth-child(5){
+    background-color: #CC6699;
+}
+.head_ul li:nth-child(6){
+    background-color: #1E4C92;
+}
+/*设置p标签行高*/
+p{
+    line-height: 25px;
+}
+/*包裹两个对比盒子的div*/
+.box_contrasts{
+    width: 400px;
+    height: 250px;
+    border: 1px solid salmon;
+    margin: 50px auto;
+}
+/*正常盒子*/
+.box_normal{
+    margin-top: 20px;
+    margin-left: 15px;
+    float: left;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    border: 5px solid slateblue;
+    background-color: pink;
+}
+/*盒子内容样式*/
+.box_content{
+    width: 130px;
+    height: 130px;
+    background-color: #0088ff;
+}
+/*盒子字体颜色*/
+.box_content p{
+    color: white;
+}
+/*怪异盒子*/
+.box_strange{
+    margin-top: 20px;
+    margin-left: 50px;
+    float: left;
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    border: 5px solid skyblue;
+    box-sizing: border-box;
+    background-color: orangered;
+}
+/*设置各个项目的上边距*/
+.hov_box_column{
+    margin-top: 50px;
+}
+/*水平分栏，设置flex*/
+.hov_container {
+    display: -webkit-flex;
+    display: flex;
+}
+/*水平分栏，垂直分栏，左侧栏样式*/
+.left-sidebar {
+    padding: 20px;
+    background-color: orange;
+}
+/*水平分栏，垂直分栏，内容样式*/
+.contents {
+    -webkit-flex: 1;
+    flex:1;
+    padding: 20px;
+    background-color: hotpink;
+}
+/*水平分栏，垂直分栏，右侧栏样式*/
+.right-sidebar {
+    padding: 20px;
+    background-color: #00aaff;
+}
+/*垂直分栏，设置flex*/
+.ver_container{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+/*flex order设置显示顺序*/
+.order_left{
+    order: 3;
+}
+/*flex order设置显示顺序*/
+.order_content{
+    order: 1;
+}
+/*flex order设置显示顺序*/
+.order_right{
+    order: 2;
+}
+/*多栏布局样式*/
+.column_layout{
+    margin-top: 50px;
+    column-count:3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+}
+/*多栏布局，左侧栏 */
+.column_left{
+    padding: 20px;
+    background-color: orange;
+}
+/*多栏布局，主体内容*/
+.column_content{
+    padding: 20px;
+    background-color: hotpink;
+}
+/*多栏布局，右侧栏*/
+.column_right{
+    padding: 20px;
+    background-color: #00aaff;
+}
+/*旧版弹盒居中，box，包裹div*/
+.old_flex_center{
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid deeppink;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-orient: horizontal;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-orient: horizontal;
+}
+/*旧版弹盒居中，内容div*/
+.flex_center_content{
+    width: 200px;
+    height: 200px;
+    background-color: #679DD4;
+}
+/*旧版弹盒居中，内容div下p标签样式*/
+.flex_center_content p{
+    margin-left: 10px;
+    line-height:50px;
+    color: white;
+    font-size: 20px;
+}
